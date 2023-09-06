@@ -1,0 +1,70 @@
+{
+  "id": "member_info",
+  "type": "SharedSlice",
+  "name": "MemberInfo",
+  "description": "MemberInfo",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "memberid": {
+          "type": "Number",
+          "config": {
+            "label": "MemberID",
+            "placeholder": ""
+          }
+        },
+        "name": {
+          "type": "Text",
+          "config": {
+            "label": "Name",
+            "placeholder": ""
+          }
+        },
+        "image": {
+          "type": "Image",
+          "config": {
+            "label": "Image",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "link": {
+          "type": "Text",
+          "config": {
+            "label": "Link",
+            "placeholder": ""
+          }
+        },
+        "githubhandle": {
+          "type": "Text",
+          "config": {
+            "label": "GithubHandle",
+            "placeholder": ""
+          }
+        },
+        "squadid": {
+          "type": "Link",
+          "config": {
+            "label": "SquadID",
+            "select": "document"
+          }
+        }
+      },
+      "items": {
+        "role": {
+          "type": "Text",
+          "config": {
+            "label": "Role",
+            "placeholder": ""
+          }
+        }
+      }
+    }
+  ]
+}
