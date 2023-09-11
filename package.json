@@ -7,9 +7,11 @@
 		"build": "vite build",
 		"preview": "vite preview",
 		"lint": "prettier --plugin-search-dir . --check . && eslint .",
-		"format": "prettier --plugin-search-dir . --write ."
+		"format": "prettier --plugin-search-dir . --write .",
+		"slicemachine": "start-slicemachine"
 	},
 	"devDependencies": {
+		"@slicemachine/adapter-sveltekit": "^0.3.13",
 		"@sveltejs/adapter-auto": "^2.0.0",
 		"@sveltejs/kit": "^1.20.4",
 		"eslint": "^8.28.0",
@@ -17,8 +19,13 @@
 		"eslint-plugin-svelte": "^2.30.0",
 		"prettier": "^2.8.0",
 		"prettier-plugin-svelte": "^2.10.1",
+		"slice-machine-ui": "^1.11.0",
 		"svelte": "^4.0.5",
 		"vite": "^4.4.2"
 	},
-	"type": "module"
+	"type": "module",
+	"dependencies": {
+		"@prismicio/client": "^7.2.0",
+		"@prismicio/svelte": "^0.1.2"
+	}
 }

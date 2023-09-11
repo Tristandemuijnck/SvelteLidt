@@ -1,0 +1,19 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"squadid": {
+				"__TYPE__": "FieldContent",
+				"value": "83",
+				"type": "Number"
+			},
+			"name": {
+				"__TYPE__": "FieldContent",
+				"value": "friendly",
+				"type": "Text"
+			}
+		},
+		"items": []
+	}
+]

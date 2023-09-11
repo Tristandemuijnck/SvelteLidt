@@ -1,9 +1,81 @@
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+:root{
+    --dark-bg: #03061d;
+    --dark-primary: ;
+    --dark-secondary: ;
+    --dark-accent: ;
+
+    --light-bg: #F4F5F7;
+    --light-primary: #FFFFFF;
+    --light-secondary: #5a00d8;
+    --ligt-accent: ;
+
+    --light-font-color: #000000;
+    --light-heading: 'Inter SemiBold', sans-serif;
+    --light-subheading-color: #4D4F62;
+
+    --radius: 10px;
 }
 
-a:focus-visible, button:focus-visible {
-    outline: none;
+:global(:root){
+    --dark-bg: #03061d;
+    --dark-primary: ;
+    --dark-secondary: ;
+    --dark-accent: ;
+
+    --light-bg: #F4F5F7;
+    --light-primary: #FFFFFF;
+    --light-secondary: #5a00d8;
+    --ligt-accent: ;
+
+    --light-font-color: #000000;
+    --light-heading: 'Inter SemiBold', sans-serif;
+    --light-subheading-color: #4D4F62;
+
+    --radius: 10px;
+}
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul{
+    list-style-type: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+/* Font imports */
+@font-face {
+    font-family: 'Inter Regular';
+    src: url('../fonts/Inter-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Inter Medium';
+    src: url('../fonts/Inter-Medium.ttf');
+}
+
+@font-face {
+    font-family: 'Inter SemiBold';
+    src: url('../fonts/Inter-SemiBold.ttf');
+}
+
+@font-face {
+    font-family: 'Inter Bold';
+    src: url('../fonts/Inter-Bold.ttf');
+}
+
+/* General */
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: var(--light-bg);
+    font-family: 'Inter Regular', sans-serif;
 }

@@ -1,0 +1,71 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"memberid": {
+				"__TYPE__": "FieldContent",
+				"value": "27",
+				"type": "Number"
+			},
+			"name": {
+				"__TYPE__": "FieldContent",
+				"value": "muscle",
+				"type": "Text"
+			},
+			"image": {
+				"__TYPE__": "ImageContent",
+				"origin": {
+					"id": "main",
+					"url": "https://images.unsplash.com/photo-1591012911207-0dbac31f37da",
+					"width": 4000,
+					"height": 4000
+				},
+				"url": "https://images.unsplash.com/photo-1591012911207-0dbac31f37da",
+				"width": 4000,
+				"height": 4000,
+				"edit": {
+					"zoom": 1,
+					"crop": {
+						"x": 0,
+						"y": 0
+					},
+					"background": "transparent"
+				},
+				"thumbnails": {}
+			},
+			"link": {
+				"__TYPE__": "FieldContent",
+				"value": "develop",
+				"type": "Text"
+			},
+			"githubhandle": {
+				"__TYPE__": "FieldContent",
+				"value": "run",
+				"type": "Text"
+			},
+			"squadid": {
+				"__TYPE__": "LinkContent",
+				"value": {
+					"__TYPE__": "DocumentLink",
+					"id": "mock_document_id"
+				}
+			}
+		},
+		"items": [
+			{
+				"__TYPE__": "GroupItemContent",
+				"value": [
+					[
+						"role",
+						{
+							"__TYPE__": "FieldContent",
+							"value": "kids",
+							"type": "Text"
+						}
+					]
+				]
+			}
+		]
+	}
+]
