@@ -45,6 +45,7 @@
         bottom: 0;
         left: 0;
         z-index: 100;
+        display: none;
     }
 
     nav{
@@ -57,6 +58,10 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+    }
+
+    li {
+        list-style-type: none;
     }
 
     figure{

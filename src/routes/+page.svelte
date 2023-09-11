@@ -3,10 +3,13 @@
     import Notitie from "../lib/components/landing/Notitie.svelte";
     import Progress from "../lib/components/landing/Progress.svelte";
     import Recent from "../lib/components/landing/Recent.svelte";
-    import MobileNav from "../lib/components/landing/general/MobileNav.svelte";
+    import DesktopNav from "../lib/components/landing/desktop/DesktopNav.svelte";
+    import MobileNav from "../lib/components/landing/mobile/MobileNav.svelte";
 </script>
 
 <Heading />
+
+<DesktopNav />
 
 <Notitie />
 
@@ -19,6 +22,10 @@
 <MobileNav />
 
 <style>
+    :root {
+        --color-default: #03061D;
+    }
+
     h2{
         font-size: 1rem;
         font-family: 'Inter SemiBold';
