@@ -73,6 +73,10 @@
         color: var(--light-secondary);
         border: solid 1px var(--light-secondary);
     }
+    
+    li {
+        list-style: none;
+    }
 
     .progress-cards{
         display: flex;

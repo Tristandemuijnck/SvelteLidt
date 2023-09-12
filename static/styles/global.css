@@ -49,6 +49,16 @@ a{
     text-decoration: none;
 }
 
+a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible {
+    outline: none;
+}
+
+button {
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
 /* Font imports */
 @font-face {
     font-family: 'Inter Regular';
@@ -78,4 +88,49 @@ html{
 body{
     background-color: var(--light-bg);
     font-family: 'Inter Regular', sans-serif;
+}
+
+/* Progressive enhancement DesktopNav */
+
+nav {
+    width: 16rem;
+    height: 100vh;
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    padding: 1rem;
+
+    font-family: 'Inter', sans-serif;
+}
+
+.desktop-nav-button {
+    display: none;
+    position: absolute;
+    right: -1.25em;
+    transition: 0.3s ease-in-out;
+}
+
+.desktop-nav-button svg {
+    fill: #D9D9D9;
+}
+
+.desktop-nav-button:is(:hover, :focus) svg {
+    fill: #5a00d8;
+}
+
+.desktop-nav-button:active {
+    transform: rotate(180deg);
+}
+
+.javascriptEnabled .desktop-nav-button {
+    display: block;
+}
+
+.to-the-left {
+    left: -13.5rem;
+}
+
+.to-the-left .desktop-nav-button {
+    transform: rotate(180deg);
 }
