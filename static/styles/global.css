@@ -49,6 +49,16 @@ a{
     text-decoration: none;
 }
 
+a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible {
+    outline: none;
+}
+
+button {
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
 /* Font imports */
 @font-face {
     font-family: 'Inter Regular';
@@ -78,4 +88,12 @@ html{
 body{
     background-color: var(--light-bg);
     font-family: 'Inter Regular', sans-serif;
+}
+
+.to-the-left {
+    left: -13.5rem;
+}
+
+.to-the-left button {
+    transform: rotate(180deg);
 }
