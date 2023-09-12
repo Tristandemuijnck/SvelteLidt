@@ -92,17 +92,7 @@ body{
 
 /* Progressive enhancement DesktopNav */
 
-nav {
-    width: 16rem;
-    height: 100vh;
-    background-color: #fff;
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    padding: 1rem;
-
-    font-family: 'Inter', sans-serif;
-}
+@media (min-width: 64rem) {
 
 .desktop-nav-button {
     display: none;
@@ -133,4 +123,6 @@ nav {
 
 .to-the-left .desktop-nav-button {
     transform: rotate(180deg);
+}
+
 }
