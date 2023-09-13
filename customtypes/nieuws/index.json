@@ -1,0 +1,28 @@
+{
+	"id": "nieuws",
+	"label": "Nieuws",
+	"format": "custom",
+	"repeatable": true,
+	"status": true,
+	"json": {
+		"Main": {
+			"uid": {
+				"config": {
+					"label": "UID"
+				},
+				"type": "UID"
+			},
+			"slices": {
+				"type": "Slices",
+				"fieldset": "Slice Zone",
+				"config": {
+					"choices": {
+						"nieuws_info": {
+							"type": "SharedSlice"
+						}
+					}
+				}
+			}
+		}
+	}
+}

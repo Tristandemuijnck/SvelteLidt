@@ -37,6 +37,39 @@ export type MemberDocument<Lang extends string = string> = prismic.PrismicDocume
 	Lang
 >;
 
+type NieuwsDocumentDataSlicesSlice = NieuwsInfoSlice;
+
+/**
+ * Content for Nieuws documents
+ */
+interface NieuwsDocumentData {
+	/**
+	 * Slice Zone field in *Nieuws*
+	 *
+	 * - **Field Type**: Slice Zone
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: nieuws.slices[]
+	 * - **Tab**: Main
+	 * - **Documentation**: https://prismic.io/docs/field#slices
+	 */
+	slices: prismic.SliceZone<NieuwsDocumentDataSlicesSlice>;
+}
+
+/**
+ * Nieuws document from Prismic
+ *
+ * - **API ID**: `nieuws`
+ * - **Repeatable**: `true`
+ * - **Documentation**: https://prismic.io/docs/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type NieuwsDocument<Lang extends string = string> = prismic.PrismicDocumentWithUID<
+	Simplify<NieuwsDocumentData>,
+	'nieuws',
+	Lang
+>;
+
 type SquadDocumentDataSlicesSlice = SquadInfoSlice;
 
 /**
@@ -103,7 +136,7 @@ export type ToolsDocument<Lang extends string = string> = prismic.PrismicDocumen
 	Lang
 >;
 
-export type AllDocumentTypes = MemberDocument | SquadDocument | ToolsDocument;
+export type AllDocumentTypes = MemberDocument | NieuwsDocument | SquadDocument | ToolsDocument;
 
 /**
  * Primary content in *MemberInfo → Primary*
@@ -176,6 +209,68 @@ type MemberInfoSliceVariation = MemberInfoSliceDefault;
  * - **Documentation**: https://prismic.io/docs/slice
  */
 export type MemberInfoSlice = prismic.SharedSlice<'member_info', MemberInfoSliceVariation>;
+
+/**
+ * Primary content in *NieuwsInfo → Primary*
+ */
+export interface NieuwsInfoSliceDefaultPrimary {
+	/**
+	 * titleBefore field in *NieuwsInfo → Primary*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: nieuws_info.primary.titlebefore
+	 * - **Documentation**: https://prismic.io/docs/field#key-text
+	 */
+	titlebefore: prismic.KeyTextField;
+
+	/**
+	 * titleAfter field in *NieuwsInfo → Primary*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: nieuws_info.primary.titleafter
+	 * - **Documentation**: https://prismic.io/docs/field#key-text
+	 */
+	titleafter: prismic.KeyTextField;
+
+	/**
+	 * subtitle field in *NieuwsInfo → Primary*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: nieuws_info.primary.subtitle
+	 * - **Documentation**: https://prismic.io/docs/field#key-text
+	 */
+	subtitle: prismic.KeyTextField;
+}
+
+/**
+ * Default variation for NieuwsInfo Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type NieuwsInfoSliceDefault = prismic.SharedSliceVariation<
+	'default',
+	Simplify<NieuwsInfoSliceDefaultPrimary>,
+	never
+>;
+
+/**
+ * Slice variation for *NieuwsInfo*
+ */
+type NieuwsInfoSliceVariation = NieuwsInfoSliceDefault;
+
+/**
+ * NieuwsInfo Shared Slice
+ *
+ * - **API ID**: `nieuws_info`
+ * - **Description**: NieuwsInfo
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type NieuwsInfoSlice = prismic.SharedSlice<'nieuws_info', NieuwsInfoSliceVariation>;
 
 /**
  * Primary content in *SquadInfo → Primary*
@@ -319,6 +414,9 @@ declare module '@prismicio/client' {
 			MemberDocument,
 			MemberDocumentData,
 			MemberDocumentDataSlicesSlice,
+			NieuwsDocument,
+			NieuwsDocumentData,
+			NieuwsDocumentDataSlicesSlice,
 			SquadDocument,
 			SquadDocumentData,
 			SquadDocumentDataSlicesSlice,
@@ -330,6 +428,10 @@ declare module '@prismicio/client' {
 			MemberInfoSliceDefaultPrimary,
 			MemberInfoSliceVariation,
 			MemberInfoSliceDefault,
+			NieuwsInfoSlice,
+			NieuwsInfoSliceDefaultPrimary,
+			NieuwsInfoSliceVariation,
+			NieuwsInfoSliceDefault,
 			SquadInfoSlice,
 			SquadInfoSliceDefaultPrimary,
 			SquadInfoSliceDefaultItem,

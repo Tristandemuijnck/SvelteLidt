@@ -1,8 +1,8 @@
-document.documentElement.classList.add("javascriptEnabled");
+// document.documentElement.classList.add("javascriptEnabled");
 
-const desktopNav = document.querySelector('nav')
-const collapseButton = document.querySelector('.desktop-nav-button')
+// const desktopNav = document.querySelector('nav')
+// const collapseButton = document.querySelector('.desktop-nav-button')
 
-collapseButton.addEventListener('click', () => {
-    desktopNav.classList.toggle('to-the-left')
-});
+// collapseButton.addEventListener('click', () => {
+//     desktopNav.classList.toggle('to-the-left')
+// });
