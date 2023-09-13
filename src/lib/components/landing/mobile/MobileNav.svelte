@@ -158,7 +158,7 @@
 			padding: 0.5rem;
 			position: relative;
 			text-decoration: none;
-			transition: 0.2s ease-in-out;
+			transition: 0.3s ease-in-out;
 		}
 
 		a svg path {
