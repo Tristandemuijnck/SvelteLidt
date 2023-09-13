@@ -2,8 +2,10 @@
 
 import MemberInfo from './MemberInfo/index.svelte';
 import SquadInfo from './SquadInfo/index.svelte';
+import ToolInfo from './ToolInfo/index.svelte';
 
 export const components = {
 	member_info: MemberInfo,
-	squad_info: SquadInfo
+	squad_info: SquadInfo,
+	tool_info: ToolInfo
 };

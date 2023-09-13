@@ -3,8 +3,19 @@
 		"__TYPE__": "SharedSliceContent",
 		"variation": "default",
 		"primary": {
+			"name": {
+				"__TYPE__": "FieldContent",
+				"value": "affect",
+				"type": "Text"
+			},
+			"link": {
+				"__TYPE__": "LinkContent",
+				"value": {
+					"__TYPE__": "ExternalLink",
+					"url": "https://prismic.io"
+				}
+			},
 			"image": {
-				"__TYPE__": "ImageContent",
 				"origin": {
 					"id": "main",
 					"url": "https://images.unsplash.com/photo-1589321599763-d66926c29613",
@@ -22,24 +33,15 @@
 					},
 					"background": "transparent"
 				},
+				"credits": null,
+				"alt": null,
+				"__TYPE__": "ImageContent",
 				"thumbnails": {}
 			},
-			"firstname": {
+			"description": {
 				"__TYPE__": "FieldContent",
-				"value": "having",
+				"value": "thought",
 				"type": "Text"
-			},
-			"lastname": {
-				"__TYPE__": "FieldContent",
-				"value": "famous",
-				"type": "Text"
-			},
-			"link": {
-				"__TYPE__": "LinkContent",
-				"value": {
-					"__TYPE__": "ExternalLink",
-					"url": "http://twitter.com"
-				}
 			}
 		},
 		"items": []

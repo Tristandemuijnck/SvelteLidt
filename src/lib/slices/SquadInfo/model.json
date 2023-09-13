@@ -12,22 +12,26 @@
       "description": "Default",
       "imageUrl": "",
       "primary": {
-        "squadid": {
-          "type": "Number",
-          "config": {
-            "label": "SquadID",
-            "placeholder": ""
-          }
-        },
         "name": {
           "type": "Text",
           "config": {
-            "label": "Name",
+            "label": "name",
             "placeholder": ""
           }
         }
       },
-      "items": {}
+      "items": {
+        "member": {
+          "type": "Link",
+          "config": {
+            "label": "member",
+            "select": "document",
+            "customtypes": [
+              "member"
+            ]
+          }
+        }
+      }
     }
   ]
 }
