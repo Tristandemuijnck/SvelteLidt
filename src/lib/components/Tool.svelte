@@ -1,4 +1,6 @@
-
+<script>
+    import Sinterklaas from '$lib/assets/images/Sinterklaas.jpg'
+</script>
 
 <h2>Tools & Fools</h2>
 
@@ -6,7 +8,7 @@
     <section class="article-wrapper">
         <article class="artoocle">
             <a href="/">
-                <img src="" alt="ToolsSource">
+                <img src='/images/Sinterklaas.jpg' alt="ToolsSource">
                 <h3>Source NAME</h3>
                 <p>Description</p>
             </a>
@@ -18,7 +20,7 @@
 
 main {
     background-color: white;
-    margin: 0 4.5em;
+    margin: 0 4em;
     /* height: 100%; */
     border-radius: 0.8em;
     /* padding: 0.1em; */
@@ -38,8 +40,11 @@ main {
     color: white;
 }
 
-.artoocle img {
-    
+.artoocle a img {
+   width: 100%;
+   height: 15em; 
+   border-radius: 1em;
+   padding: 0.5em;
 }
 
 h2 {
