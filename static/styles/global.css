@@ -97,6 +97,7 @@ body{
 .desktop-nav-button {
     display: none;
     position: absolute;
+    top: 50%;
     right: -1.25em;
     transition: 0.3s ease-in-out;
 }
@@ -123,6 +124,15 @@ body{
 
 .to-the-left .desktop-nav-button {
     transform: rotate(180deg);
+}
+
+.friends-overview {
+    margin: 0 0;
+}
+
+.friends-overview .center {
+    margin: 0 auto;
+    margin-left: 0;
 }
 
 }

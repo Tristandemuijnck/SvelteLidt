@@ -1,5 +1,5 @@
 {
-	"repositoryName": "wumm",
+	"repositoryName": "wum-fdnd-social-platform",
 	"adapter": "@slicemachine/adapter-sveltekit",
 	"libraries": ["./src/lib/slices"],
 	"localSliceSimulatorURL": "http://localhost:5173/slice-simulator"
