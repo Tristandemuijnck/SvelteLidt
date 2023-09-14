@@ -1,5 +1,4 @@
 <script>
-    import MobileNav from "$lib/components/landing/mobile/MobileNav.svelte";
     import { SliceZone } from '@prismicio/svelte'
     import { components } from '$lib/slices'
 

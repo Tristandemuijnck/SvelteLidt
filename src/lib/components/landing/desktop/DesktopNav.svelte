@@ -1,8 +1,8 @@
 <script>
 </script>
 
-<nav>
-    <img src="img/logo.svg" alt="" width="200" height="85">
+<nav class="desktop-nav">
+    <img class="logo" src="img/logo.svg" alt="" width="200" height="85">
 	<ul>
 		<li>
 			<a href="watkanjewel.nl">
@@ -64,58 +64,15 @@
         <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
             <circle cx="20" cy="20" r="20" fill=""/>
             <path fill-rule="evenodd" clip-rule="evenodd" d="M18.8057 12.5656C18.8057 11.7251 17.8318 11.2596 17.1777 11.7874L7.96455 19.2218C7.46852 19.622 7.46852 20.378 7.96455 20.7782L17.1777 28.2126C17.8318 28.7404 18.8057 28.2748 18.8057 27.4344V24.1466C18.8057 23.3061 19.7796 22.8405 20.4337 23.3683L26.437 28.2126C27.0911 28.7404 28.065 28.2748 28.065 27.4344V12.5656C28.065 11.7251 27.0911 11.2596 26.437 11.7874L20.4337 16.6316C19.7796 17.1594 18.8057 16.6939 18.8057 15.8534V12.5656Z" fill="white"/>
-            </svg>
-
+        </svg>
     </button>
 </nav>
 
 <style>
     @media (max-width: 767px) {
-        nav {
+        .desktop-nav {
             display: none;
         }
-    }
-
-    nav {
-        width: 16rem;
-        height: 100vh;
-        background-color: #fff;
-        position: fixed;
-        top: 0;
-        bottom: 0;
-        padding: 1rem;
-        font-family: 'Inter', sans-serif;
-    }
-
-    .desktop-nav-button {
-        display: none;
-        position: absolute;
-        right: -1.25em;
-        transition: 0.3s ease-in-out;
-    }
-
-    .desktop-nav-button svg {
-        fill: #D9D9D9;
-    }
-
-    .desktop-nav-button:is(:hover, :focus) svg {
-        fill: #5a00d8;
-    }
-
-    .desktop-nav-button:active {
-        transform: rotate(180deg);
-    }
-
-    .javascriptEnabled .desktop-nav-button {
-        display: block;
-    }
-
-    .to-the-left {
-        left: -13.5rem;
-    }
-
-    .to-the-left .desktop-nav-button {
-        transform: rotate(180deg);
     }
 
     .logo {

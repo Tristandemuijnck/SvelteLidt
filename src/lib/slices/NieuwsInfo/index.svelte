@@ -20,4 +20,9 @@
         font-weight: 700;
         margin-bottom: 1rem;
     }
+
+    h1 span{
+        font-family: 'Courgette', cursive;
+        letter-spacing: -6%;
+    }
 </style>
