@@ -18,4 +18,10 @@
     img{
         padding: 0.6rem 0;
     }
+
+    @media (min-width: 768px){
+        section{
+            display: none;
+        }
+    }
 </style>

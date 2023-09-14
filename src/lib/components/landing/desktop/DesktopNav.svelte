@@ -70,6 +70,53 @@
 </nav>
 
 <style>
+    @media (max-width: 767px) {
+        nav {
+            display: none;
+        }
+    }
+
+    nav {
+        width: 16rem;
+        height: 100vh;
+        background-color: #fff;
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        padding: 1rem;
+        font-family: 'Inter', sans-serif;
+    }
+
+    .desktop-nav-button {
+        display: none;
+        position: absolute;
+        right: -1.25em;
+        transition: 0.3s ease-in-out;
+    }
+
+    .desktop-nav-button svg {
+        fill: #D9D9D9;
+    }
+
+    .desktop-nav-button:is(:hover, :focus) svg {
+        fill: #5a00d8;
+    }
+
+    .desktop-nav-button:active {
+        transform: rotate(180deg);
+    }
+
+    .javascriptEnabled .desktop-nav-button {
+        display: block;
+    }
+
+    .to-the-left {
+        left: -13.5rem;
+    }
+
+    .to-the-left .desktop-nav-button {
+        transform: rotate(180deg);
+    }
 
     .logo {
         width: 9rem;
