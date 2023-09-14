@@ -1,8 +1,5 @@
 <script>
     import Heading from "../lib/components/landing/Heading.svelte";
-    import Notitie from "../lib/components/landing/Notitie.svelte";
-    import Progress from "../lib/components/landing/Progress.svelte";
-    import Recent from "../lib/components/landing/Recent.svelte";
     import DesktopNav from "../lib/components/landing/desktop/DesktopNav.svelte";
     import MobileNav from "../lib/components/landing/mobile/MobileNav.svelte";
 </script>
@@ -11,13 +8,7 @@
 
 <DesktopNav />
 
-<Notitie />
-
-<Progress />
-
 <h2>Recente notities</h2>
-
-<Recent />
 
 <MobileNav />
 

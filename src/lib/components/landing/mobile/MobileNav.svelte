@@ -5,31 +5,23 @@
                 <a href="/">
                     <figure>
                         <img src="icons/home.svg" alt="">
-                        <figcaption>Home</figcaption>
+                        <figcaption>Overzicht</figcaption>
                     </figure>
                 </a>
             </li>
             <li>
-                <a href="/criteria">
+                <a href="/tools">
                     <figure>
                         <img src="icons/criteria.svg" alt="">
-                        <figcaption>Criteria</figcaption>
+                        <figcaption>Tools</figcaption>
                     </figure>
                 </a>
             </li>
             <li>
-                <a href="/notities">
+                <a href="/nieuws">
                     <figure>
-                        <img src="icons/notities.svg" alt="">
-                        <figcaption>Notities</figcaption>
-                    </figure>
-                </a>
-            </li>
-            <li>
-                <a href="/profiel">
-                    <figure>
-                        <img src="icons/user.svg" alt="">
-                        <figcaption>Profiel</figcaption>
+                        <img src="icons/nieuws.svg" alt="">
+                        <figcaption>Nieuws</figcaption>
                     </figure>
                 </a>
             </li>
@@ -45,7 +37,6 @@
         bottom: 0;
         left: 0;
         z-index: 100;
-        display: none;
     }
 
     nav{
@@ -56,7 +47,7 @@
 
     ul{
         display: flex;
-        justify-content: space-between;
+        justify-content: space-around;
         align-items: center;
     }
 
@@ -72,12 +63,18 @@
     }
 
     img{
-        height: 25px;
+        height: 22px;
     }
 
     figcaption{
         font-family: 'Inter SemiBold';
-        font-size: 0.75rem;
+        font-size: 0.70rem;
         color: var(--light-subheading-color);
+    }
+
+    @media (min-width: 768px){
+        section{
+            display: none;
+        }
     }
 </style>

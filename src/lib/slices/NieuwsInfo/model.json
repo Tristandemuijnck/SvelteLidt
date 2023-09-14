@@ -1,0 +1,40 @@
+{
+  "id": "nieuws_info",
+  "type": "SharedSlice",
+  "name": "NieuwsInfo",
+  "description": "NieuwsInfo",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "titlebefore": {
+          "type": "Text",
+          "config": {
+            "label": "titleBefore",
+            "placeholder": ""
+          }
+        },
+        "titleafter": {
+          "type": "Text",
+          "config": {
+            "label": "titleAfter",
+            "placeholder": ""
+          }
+        },
+        "subtitle": {
+          "type": "Text",
+          "config": {
+            "label": "subtitle",
+            "placeholder": ""
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}
