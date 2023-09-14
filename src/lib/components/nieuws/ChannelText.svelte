@@ -6,7 +6,7 @@
     <div class="channel-text-wrapper">
         <div class="chat-msg">
             <div class="msg-info">
-                <p><span>Siem</span> @ 11-09-2023 12:11</p>
+                <p><span>Siem</span> • 11-09-2023 12:11</p>
             </div>
             <div class="msg-text">
                 <p>Hoe maak ik een nieuwe slice aan?</p>
@@ -15,7 +15,7 @@
 
         <div class="chat-msg">
             <div class="msg-info">
-                <p><span>Stefan</span> &gt; 11-09-2023 12:12</p>
+                <p><span>Stefan</span> • 11-09-2023 12:12</p>
             </div>
             <div class="msg-text">
                 <p>Druk op "add slice".</p>
@@ -24,7 +24,7 @@
 
         <div class="chat-msg">
             <div class="msg-info">
-                <p><span>Siem</span> - 11-09-2023 12:13</p>
+                <p><span>Siem</span> • 11-09-2023 12:13</p>
             </div>
             <div class="msg-text">
                 <p>Bedankt!</p>
