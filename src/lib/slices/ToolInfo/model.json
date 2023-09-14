@@ -1,8 +1,8 @@
 {
-  "id": "member_info",
+  "id": "tool_info",
   "type": "SharedSlice",
-  "name": "MemberInfo",
-  "description": "MemberInfo",
+  "name": "ToolInfo",
+  "description": "ToolInfo",
   "variations": [
     {
       "id": "default",
@@ -12,25 +12,10 @@
       "description": "Default",
       "imageUrl": "",
       "primary": {
-        "image": {
-          "type": "Image",
-          "config": {
-            "label": "image",
-            "constraint": {},
-            "thumbnails": []
-          }
-        },
-        "firstname": {
+        "name": {
           "type": "Text",
           "config": {
-            "label": "firstName",
-            "placeholder": ""
-          }
-        },
-        "lastname": {
-          "type": "Text",
-          "config": {
-            "label": "lastName",
+            "label": "name",
             "placeholder": ""
           }
         },
@@ -40,6 +25,21 @@
             "label": "link",
             "placeholder": "",
             "select": null
+          }
+        },
+        "image": {
+          "type": "Image",
+          "config": {
+            "label": "image",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "description": {
+          "type": "Text",
+          "config": {
+            "label": "description",
+            "placeholder": ""
           }
         }
       },

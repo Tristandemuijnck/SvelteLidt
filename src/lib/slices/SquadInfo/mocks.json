@@ -3,17 +3,28 @@
 		"__TYPE__": "SharedSliceContent",
 		"variation": "default",
 		"primary": {
-			"squadid": {
-				"__TYPE__": "FieldContent",
-				"value": "83",
-				"type": "Number"
-			},
 			"name": {
 				"__TYPE__": "FieldContent",
-				"value": "friendly",
+				"value": "inch",
 				"type": "Text"
 			}
 		},
-		"items": []
+		"items": [
+			{
+				"__TYPE__": "GroupItemContent",
+				"value": [
+					[
+						"member",
+						{
+							"__TYPE__": "LinkContent",
+							"value": {
+								"__TYPE__": "DocumentLink",
+								"id": "mock_document_id"
+							}
+						}
+					]
+				]
+			}
+		]
 	}
 ]
