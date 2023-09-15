@@ -11,6 +11,8 @@
 
 <DesktopNav />
 
+<SquadInfo />
+
 <Notitie />
 
 <Progress />
@@ -18,8 +20,6 @@
 <h2>Recente notities</h2>
 
 <Recent />
-
-<SquadInfo />
 
 <MobileNav />
 
