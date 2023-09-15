@@ -19,6 +19,8 @@
 
 <Recent />
 
+<SquadInfo />
+
 <MobileNav />
 
 <style>
