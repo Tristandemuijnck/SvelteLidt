@@ -1,12 +1,17 @@
 <script>
-    import Heading from "$lib/components/landing/Heading.svelte";
     import DesktopNav from "$lib/components/landing/desktop/DesktopNav.svelte";
     import MobileNav from "$lib/components/landing/mobile/MobileNav.svelte";
 	import Tool from "$lib/components/Tool.svelte";
+	import Heading from "$lib/components/landing/Heading.svelte";
     
 </script>
 
-<Heading />
+<header>
+    <section>
+        <h1>FDND <span>Tools & Resources</span></h1>
+        <p>Wat schrijf je vandaag op?</p>
+    </section>
+</header>
 
 <DesktopNav />
 
@@ -18,6 +23,9 @@
     :root {
         --color-default: #03061D;
         box-sizing: border-box;
+    }
+    span{
+        color: var(--light-secondary);
     }
 
     /* h2 {
