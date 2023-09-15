@@ -11,8 +11,6 @@
 
 <DesktopNav />
 
-<SquadInfo />
-
 <Notitie />
 
 <Progress />

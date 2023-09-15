@@ -70,6 +70,71 @@ export type SquadDocument<Lang extends string = string> = prismic.PrismicDocumen
 	Lang
 >;
 
+type Squad2DocumentDataSlicesSlice = SquadInfoSlice;
+
+/**
+ * Content for Squad2 documents
+ */
+interface Squad2DocumentData {
+	/**
+	 * Slice Zone field in *Squad2*
+	 *
+	 * - **Field Type**: Slice Zone
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: squad2.slices[]
+	 * - **Tab**: Main
+	 * - **Documentation**: https://prismic.io/docs/field#slices
+	 */
+	slices: prismic.SliceZone<Squad2DocumentDataSlicesSlice>
+	/**
+	 * Meta Description field in *Squad2*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: A brief summary of the page
+	 * - **API ID Path**: squad2.meta_description
+	 * - **Tab**: SEO & Metadata
+	 * - **Documentation**: https://prismic.io/docs/field#key-text
+	 */;
+	meta_description: prismic.KeyTextField;
+
+	/**
+	 * Meta Image field in *Squad2*
+	 *
+	 * - **Field Type**: Image
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: squad2.meta_image
+	 * - **Tab**: SEO & Metadata
+	 * - **Documentation**: https://prismic.io/docs/field#image
+	 */
+	meta_image: prismic.ImageField<never>;
+
+	/**
+	 * Meta Title field in *Squad2*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: A title of the page used for social media and search engines
+	 * - **API ID Path**: squad2.meta_title
+	 * - **Tab**: SEO & Metadata
+	 * - **Documentation**: https://prismic.io/docs/field#key-text
+	 */
+	meta_title: prismic.KeyTextField;
+}
+
+/**
+ * Squad2 document from Prismic
+ *
+ * - **API ID**: `squad2`
+ * - **Repeatable**: `true`
+ * - **Documentation**: https://prismic.io/docs/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type Squad2Document<Lang extends string = string> = prismic.PrismicDocumentWithUID<
+	Simplify<Squad2DocumentData>,
+	'squad2',
+	Lang
+>;
+
 type ToolsDocumentDataSlicesSlice = ToolInfoSlice;
 
 /**
@@ -103,7 +168,7 @@ export type ToolsDocument<Lang extends string = string> = prismic.PrismicDocumen
 	Lang
 >;
 
-export type AllDocumentTypes = MemberDocument | SquadDocument | ToolsDocument;
+export type AllDocumentTypes = MemberDocument | SquadDocument | Squad2Document | ToolsDocument;
 
 /**
  * Primary content in *MemberInfo → Primary*
@@ -322,6 +387,9 @@ declare module '@prismicio/client' {
 			SquadDocument,
 			SquadDocumentData,
 			SquadDocumentDataSlicesSlice,
+			Squad2Document,
+			Squad2DocumentData,
+			Squad2DocumentDataSlicesSlice,
 			ToolsDocument,
 			ToolsDocumentData,
 			ToolsDocumentDataSlicesSlice,

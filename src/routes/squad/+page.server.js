@@ -1,11 +1,14 @@
-import { createClient } from "$lib/prismicio"
+import { createClient } from '$lib/prismicio';
 
 export const prerender = true;
 
-export async function load({fetch, request}){
-    const client = createClient({fetch, request})
+export async function load({ fetch, request }) {
+	const client = createClient({ fetch, request });
 
-    const document = await client.getByUID('squad', '2b')
+	const page = await client.getByUID('squad', 'squad');
 
-    return document.data
+    console.log('INFO',page);
+
+	return page.data;
+    // console.log(page.data.slices);
 }
