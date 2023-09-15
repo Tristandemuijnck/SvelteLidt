@@ -80,6 +80,11 @@ button {
     src: url('../fonts/Inter-Bold.ttf');
 }
 
+@font-face {
+    font-family: 'Courgette';
+    src: url('../fonts/Courgette-Regular.ttf');
+}
+
 /* General */
 html{
     scroll-behavior: smooth;
@@ -92,7 +97,7 @@ body{
 
 /* Progressive enhancement DesktopNav */
 
-nav {
+.desktop-nav {
     width: 16rem;
     height: 100vh;
     background-color: #fff;
@@ -100,7 +105,6 @@ nav {
     top: 0;
     bottom: 0;
     padding: 1rem;
-
     font-family: 'Inter', sans-serif;
 }
 

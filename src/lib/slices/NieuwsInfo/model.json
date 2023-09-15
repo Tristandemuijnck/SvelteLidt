@@ -1,8 +1,8 @@
 {
-  "id": "member_info",
+  "id": "nieuws_info",
   "type": "SharedSlice",
-  "name": "MemberInfo",
-  "description": "MemberInfo",
+  "name": "NieuwsInfo",
+  "description": "NieuwsInfo",
   "variations": [
     {
       "id": "default",
@@ -12,34 +12,25 @@
       "description": "Default",
       "imageUrl": "",
       "primary": {
-        "image": {
-          "type": "Image",
-          "config": {
-            "label": "image",
-            "constraint": {},
-            "thumbnails": []
-          }
-        },
-        "firstname": {
+        "titlebefore": {
           "type": "Text",
           "config": {
-            "label": "firstName",
+            "label": "titleBefore",
             "placeholder": ""
           }
         },
-        "lastname": {
+        "titleafter": {
           "type": "Text",
           "config": {
-            "label": "lastName",
+            "label": "titleAfter",
             "placeholder": ""
           }
         },
-        "link": {
-          "type": "Link",
+        "subtitle": {
+          "type": "Text",
           "config": {
-            "label": "link",
-            "placeholder": "",
-            "select": null
+            "label": "subtitle",
+            "placeholder": ""
           }
         }
       },

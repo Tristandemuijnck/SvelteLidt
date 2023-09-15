@@ -1,0 +1,24 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"subtitle": {
+				"__TYPE__": "FieldContent",
+				"value": "skill",
+				"type": "Text"
+			},
+			"titlebefore": {
+				"__TYPE__": "FieldContent",
+				"value": "make",
+				"type": "Text"
+			},
+			"titleafter": {
+				"__TYPE__": "FieldContent",
+				"value": "certain",
+				"type": "Text"
+			}
+		},
+		"items": []
+	}
+]

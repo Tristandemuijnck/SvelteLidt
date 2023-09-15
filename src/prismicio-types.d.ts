@@ -7,11 +7,11 @@ type Simplify<T> = { [KeyType in keyof T]: T[KeyType] };
 type MemberDocumentDataSlicesSlice = MemberInfoSlice;
 
 /**
- * Content for member documents
+ * Content for Member documents
  */
 interface MemberDocumentData {
 	/**
-	 * Slice Zone field in *member*
+	 * Slice Zone field in *Member*
 	 *
 	 * - **Field Type**: Slice Zone
 	 * - **Placeholder**: *None*
@@ -19,43 +19,11 @@ interface MemberDocumentData {
 	 * - **Tab**: Main
 	 * - **Documentation**: https://prismic.io/docs/field#slices
 	 */
-	slices: prismic.SliceZone<MemberDocumentDataSlicesSlice>
-	/**
-	 * Meta Description field in *member*
-	 *
-	 * - **Field Type**: Text
-	 * - **Placeholder**: A brief summary of the page
-	 * - **API ID Path**: member.meta_description
-	 * - **Tab**: SEO & Metadata
-	 * - **Documentation**: https://prismic.io/docs/field#key-text
-	 */;
-	meta_description: prismic.KeyTextField;
-
-	/**
-	 * Meta Image field in *member*
-	 *
-	 * - **Field Type**: Image
-	 * - **Placeholder**: *None*
-	 * - **API ID Path**: member.meta_image
-	 * - **Tab**: SEO & Metadata
-	 * - **Documentation**: https://prismic.io/docs/field#image
-	 */
-	meta_image: prismic.ImageField<never>;
-
-	/**
-	 * Meta Title field in *member*
-	 *
-	 * - **Field Type**: Text
-	 * - **Placeholder**: A title of the page used for social media and search engines
-	 * - **API ID Path**: member.meta_title
-	 * - **Tab**: SEO & Metadata
-	 * - **Documentation**: https://prismic.io/docs/field#key-text
-	 */
-	meta_title: prismic.KeyTextField;
+	slices: prismic.SliceZone<MemberDocumentDataSlicesSlice>;
 }
 
 /**
- * member document from Prismic
+ * Member document from Prismic
  *
  * - **API ID**: `member`
  * - **Repeatable**: `true`
@@ -69,25 +37,47 @@ export type MemberDocument<Lang extends string = string> = prismic.PrismicDocume
 	Lang
 >;
 
+type NieuwsDocumentDataSlicesSlice = NieuwsInfoSlice;
+
+/**
+ * Content for Nieuws documents
+ */
+interface NieuwsDocumentData {
+	/**
+	 * Slice Zone field in *Nieuws*
+	 *
+	 * - **Field Type**: Slice Zone
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: nieuws.slices[]
+	 * - **Tab**: Main
+	 * - **Documentation**: https://prismic.io/docs/field#slices
+	 */
+	slices: prismic.SliceZone<NieuwsDocumentDataSlicesSlice>;
+}
+
+/**
+ * Nieuws document from Prismic
+ *
+ * - **API ID**: `nieuws`
+ * - **Repeatable**: `true`
+ * - **Documentation**: https://prismic.io/docs/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type NieuwsDocument<Lang extends string = string> = prismic.PrismicDocumentWithUID<
+	Simplify<NieuwsDocumentData>,
+	'nieuws',
+	Lang
+>;
+
 type SquadDocumentDataSlicesSlice = SquadInfoSlice;
 
 /**
- * Content for squad documents
+ * Content for Squad documents
  */
 interface SquadDocumentData {
 	/**
-	 * Title field in *squad*
-	 *
-	 * - **Field Type**: Text
-	 * - **Placeholder**: *None*
-	 * - **API ID Path**: squad.title
-	 * - **Tab**: Main
-	 * - **Documentation**: https://prismic.io/docs/field#key-text
-	 */
-	title: prismic.KeyTextField;
-
-	/**
-	 * Slice Zone field in *squad*
+	 * Slice Zone field in *Squad*
 	 *
 	 * - **Field Type**: Slice Zone
 	 * - **Placeholder**: *None*
@@ -95,43 +85,11 @@ interface SquadDocumentData {
 	 * - **Tab**: Main
 	 * - **Documentation**: https://prismic.io/docs/field#slices
 	 */
-	slices: prismic.SliceZone<SquadDocumentDataSlicesSlice>
-	/**
-	 * Meta Description field in *squad*
-	 *
-	 * - **Field Type**: Text
-	 * - **Placeholder**: A brief summary of the page
-	 * - **API ID Path**: squad.meta_description
-	 * - **Tab**: SEO & Metadata
-	 * - **Documentation**: https://prismic.io/docs/field#key-text
-	 */;
-	meta_description: prismic.KeyTextField;
-
-	/**
-	 * Meta Image field in *squad*
-	 *
-	 * - **Field Type**: Image
-	 * - **Placeholder**: *None*
-	 * - **API ID Path**: squad.meta_image
-	 * - **Tab**: SEO & Metadata
-	 * - **Documentation**: https://prismic.io/docs/field#image
-	 */
-	meta_image: prismic.ImageField<never>;
-
-	/**
-	 * Meta Title field in *squad*
-	 *
-	 * - **Field Type**: Text
-	 * - **Placeholder**: A title of the page used for social media and search engines
-	 * - **API ID Path**: squad.meta_title
-	 * - **Tab**: SEO & Metadata
-	 * - **Documentation**: https://prismic.io/docs/field#key-text
-	 */
-	meta_title: prismic.KeyTextField;
+	slices: prismic.SliceZone<SquadDocumentDataSlicesSlice>;
 }
 
 /**
- * squad document from Prismic
+ * Squad document from Prismic
  *
  * - **API ID**: `squad`
  * - **Repeatable**: `true`
@@ -145,34 +103,47 @@ export type SquadDocument<Lang extends string = string> = prismic.PrismicDocumen
 	Lang
 >;
 
-export type AllDocumentTypes = MemberDocument | SquadDocument;
+type ToolsDocumentDataSlicesSlice = ToolInfoSlice;
+
+/**
+ * Content for Tools documents
+ */
+interface ToolsDocumentData {
+	/**
+	 * Slice Zone field in *Tools*
+	 *
+	 * - **Field Type**: Slice Zone
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: tools.slices[]
+	 * - **Tab**: Main
+	 * - **Documentation**: https://prismic.io/docs/field#slices
+	 */
+	slices: prismic.SliceZone<ToolsDocumentDataSlicesSlice>;
+}
+
+/**
+ * Tools document from Prismic
+ *
+ * - **API ID**: `tools`
+ * - **Repeatable**: `true`
+ * - **Documentation**: https://prismic.io/docs/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type ToolsDocument<Lang extends string = string> = prismic.PrismicDocumentWithUID<
+	Simplify<ToolsDocumentData>,
+	'tools',
+	Lang
+>;
+
+export type AllDocumentTypes = MemberDocument | NieuwsDocument | SquadDocument | ToolsDocument;
 
 /**
  * Primary content in *MemberInfo → Primary*
  */
 export interface MemberInfoSliceDefaultPrimary {
 	/**
-	 * MemberID field in *MemberInfo → Primary*
-	 *
-	 * - **Field Type**: Number
-	 * - **Placeholder**: *None*
-	 * - **API ID Path**: member_info.primary.memberid
-	 * - **Documentation**: https://prismic.io/docs/field#number
-	 */
-	memberid: prismic.NumberField;
-
-	/**
-	 * Name field in *MemberInfo → Primary*
-	 *
-	 * - **Field Type**: Text
-	 * - **Placeholder**: *None*
-	 * - **API ID Path**: member_info.primary.name
-	 * - **Documentation**: https://prismic.io/docs/field#key-text
-	 */
-	name: prismic.KeyTextField;
-
-	/**
-	 * Image field in *MemberInfo → Primary*
+	 * image field in *MemberInfo → Primary*
 	 *
 	 * - **Field Type**: Image
 	 * - **Placeholder**: *None*
@@ -182,49 +153,34 @@ export interface MemberInfoSliceDefaultPrimary {
 	image: prismic.ImageField<never>;
 
 	/**
-	 * Link field in *MemberInfo → Primary*
+	 * firstName field in *MemberInfo → Primary*
 	 *
 	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: member_info.primary.firstname
+	 * - **Documentation**: https://prismic.io/docs/field#key-text
+	 */
+	firstname: prismic.KeyTextField;
+
+	/**
+	 * lastName field in *MemberInfo → Primary*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: member_info.primary.lastname
+	 * - **Documentation**: https://prismic.io/docs/field#key-text
+	 */
+	lastname: prismic.KeyTextField;
+
+	/**
+	 * link field in *MemberInfo → Primary*
+	 *
+	 * - **Field Type**: Link
 	 * - **Placeholder**: *None*
 	 * - **API ID Path**: member_info.primary.link
-	 * - **Documentation**: https://prismic.io/docs/field#key-text
-	 */
-	link: prismic.KeyTextField;
-
-	/**
-	 * GithubHandle field in *MemberInfo → Primary*
-	 *
-	 * - **Field Type**: Text
-	 * - **Placeholder**: *None*
-	 * - **API ID Path**: member_info.primary.githubhandle
-	 * - **Documentation**: https://prismic.io/docs/field#key-text
-	 */
-	githubhandle: prismic.KeyTextField;
-
-	/**
-	 * SquadID field in *MemberInfo → Primary*
-	 *
-	 * - **Field Type**: Content Relationship
-	 * - **Placeholder**: *None*
-	 * - **API ID Path**: member_info.primary.squadid
 	 * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
 	 */
-	squadid: prismic.ContentRelationshipField;
-}
-
-/**
- * Primary content in *MemberInfo → Items*
- */
-export interface MemberInfoSliceDefaultItem {
-	/**
-	 * Role field in *MemberInfo → Items*
-	 *
-	 * - **Field Type**: Text
-	 * - **Placeholder**: *None*
-	 * - **API ID Path**: member_info.items[].role
-	 * - **Documentation**: https://prismic.io/docs/field#key-text
-	 */
-	role: prismic.KeyTextField;
+	link: prismic.LinkField;
 }
 
 /**
@@ -237,7 +193,7 @@ export interface MemberInfoSliceDefaultItem {
 export type MemberInfoSliceDefault = prismic.SharedSliceVariation<
 	'default',
 	Simplify<MemberInfoSliceDefaultPrimary>,
-	Simplify<MemberInfoSliceDefaultItem>
+	never
 >;
 
 /**
@@ -255,21 +211,73 @@ type MemberInfoSliceVariation = MemberInfoSliceDefault;
 export type MemberInfoSlice = prismic.SharedSlice<'member_info', MemberInfoSliceVariation>;
 
 /**
+ * Primary content in *NieuwsInfo → Primary*
+ */
+export interface NieuwsInfoSliceDefaultPrimary {
+	/**
+	 * titleBefore field in *NieuwsInfo → Primary*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: nieuws_info.primary.titlebefore
+	 * - **Documentation**: https://prismic.io/docs/field#key-text
+	 */
+	titlebefore: prismic.KeyTextField;
+
+	/**
+	 * titleAfter field in *NieuwsInfo → Primary*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: nieuws_info.primary.titleafter
+	 * - **Documentation**: https://prismic.io/docs/field#key-text
+	 */
+	titleafter: prismic.KeyTextField;
+
+	/**
+	 * subtitle field in *NieuwsInfo → Primary*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: nieuws_info.primary.subtitle
+	 * - **Documentation**: https://prismic.io/docs/field#key-text
+	 */
+	subtitle: prismic.KeyTextField;
+}
+
+/**
+ * Default variation for NieuwsInfo Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type NieuwsInfoSliceDefault = prismic.SharedSliceVariation<
+	'default',
+	Simplify<NieuwsInfoSliceDefaultPrimary>,
+	never
+>;
+
+/**
+ * Slice variation for *NieuwsInfo*
+ */
+type NieuwsInfoSliceVariation = NieuwsInfoSliceDefault;
+
+/**
+ * NieuwsInfo Shared Slice
+ *
+ * - **API ID**: `nieuws_info`
+ * - **Description**: NieuwsInfo
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type NieuwsInfoSlice = prismic.SharedSlice<'nieuws_info', NieuwsInfoSliceVariation>;
+
+/**
  * Primary content in *SquadInfo → Primary*
  */
 export interface SquadInfoSliceDefaultPrimary {
 	/**
-	 * SquadID field in *SquadInfo → Primary*
-	 *
-	 * - **Field Type**: Number
-	 * - **Placeholder**: *None*
-	 * - **API ID Path**: squad_info.primary.squadid
-	 * - **Documentation**: https://prismic.io/docs/field#number
-	 */
-	squadid: prismic.NumberField;
-
-	/**
-	 * Name field in *SquadInfo → Primary*
+	 * name field in *SquadInfo → Primary*
 	 *
 	 * - **Field Type**: Text
 	 * - **Placeholder**: *None*
@@ -277,6 +285,21 @@ export interface SquadInfoSliceDefaultPrimary {
 	 * - **Documentation**: https://prismic.io/docs/field#key-text
 	 */
 	name: prismic.KeyTextField;
+}
+
+/**
+ * Primary content in *SquadInfo → Items*
+ */
+export interface SquadInfoSliceDefaultItem {
+	/**
+	 * member field in *SquadInfo → Items*
+	 *
+	 * - **Field Type**: Content Relationship
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: squad_info.items[].member
+	 * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+	 */
+	member: prismic.ContentRelationshipField<'member'>;
 }
 
 /**
@@ -289,7 +312,7 @@ export interface SquadInfoSliceDefaultPrimary {
 export type SquadInfoSliceDefault = prismic.SharedSliceVariation<
 	'default',
 	Simplify<SquadInfoSliceDefaultPrimary>,
-	never
+	Simplify<SquadInfoSliceDefaultItem>
 >;
 
 /**
@@ -306,6 +329,78 @@ type SquadInfoSliceVariation = SquadInfoSliceDefault;
  */
 export type SquadInfoSlice = prismic.SharedSlice<'squad_info', SquadInfoSliceVariation>;
 
+/**
+ * Primary content in *ToolInfo → Primary*
+ */
+export interface ToolInfoSliceDefaultPrimary {
+	/**
+	 * name field in *ToolInfo → Primary*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: tool_info.primary.name
+	 * - **Documentation**: https://prismic.io/docs/field#key-text
+	 */
+	name: prismic.KeyTextField;
+
+	/**
+	 * link field in *ToolInfo → Primary*
+	 *
+	 * - **Field Type**: Link
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: tool_info.primary.link
+	 * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+	 */
+	link: prismic.LinkField;
+
+	/**
+	 * image field in *ToolInfo → Primary*
+	 *
+	 * - **Field Type**: Image
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: tool_info.primary.image
+	 * - **Documentation**: https://prismic.io/docs/field#image
+	 */
+	image: prismic.ImageField<never>;
+
+	/**
+	 * description field in *ToolInfo → Primary*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: tool_info.primary.description
+	 * - **Documentation**: https://prismic.io/docs/field#key-text
+	 */
+	description: prismic.KeyTextField;
+}
+
+/**
+ * Default variation for ToolInfo Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type ToolInfoSliceDefault = prismic.SharedSliceVariation<
+	'default',
+	Simplify<ToolInfoSliceDefaultPrimary>,
+	never
+>;
+
+/**
+ * Slice variation for *ToolInfo*
+ */
+type ToolInfoSliceVariation = ToolInfoSliceDefault;
+
+/**
+ * ToolInfo Shared Slice
+ *
+ * - **API ID**: `tool_info`
+ * - **Description**: ToolInfo
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type ToolInfoSlice = prismic.SharedSlice<'tool_info', ToolInfoSliceVariation>;
+
 declare module '@prismicio/client' {
 	interface CreateClient {
 		(
@@ -319,19 +414,33 @@ declare module '@prismicio/client' {
 			MemberDocument,
 			MemberDocumentData,
 			MemberDocumentDataSlicesSlice,
+			NieuwsDocument,
+			NieuwsDocumentData,
+			NieuwsDocumentDataSlicesSlice,
 			SquadDocument,
 			SquadDocumentData,
 			SquadDocumentDataSlicesSlice,
+			ToolsDocument,
+			ToolsDocumentData,
+			ToolsDocumentDataSlicesSlice,
 			AllDocumentTypes,
 			MemberInfoSlice,
 			MemberInfoSliceDefaultPrimary,
-			MemberInfoSliceDefaultItem,
 			MemberInfoSliceVariation,
 			MemberInfoSliceDefault,
+			NieuwsInfoSlice,
+			NieuwsInfoSliceDefaultPrimary,
+			NieuwsInfoSliceVariation,
+			NieuwsInfoSliceDefault,
 			SquadInfoSlice,
 			SquadInfoSliceDefaultPrimary,
+			SquadInfoSliceDefaultItem,
 			SquadInfoSliceVariation,
-			SquadInfoSliceDefault
+			SquadInfoSliceDefault,
+			ToolInfoSlice,
+			ToolInfoSliceDefaultPrimary,
+			ToolInfoSliceVariation,
+			ToolInfoSliceDefault
 		};
 	}
 }

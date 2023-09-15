@@ -1,6 +1,6 @@
 {
-	"id": "squad",
-	"label": "Squad",
+	"id": "nieuws",
+	"label": "Nieuws",
 	"format": "custom",
 	"repeatable": true,
 	"status": true,
@@ -17,7 +17,7 @@
 				"fieldset": "Slice Zone",
 				"config": {
 					"choices": {
-						"squad_info": {
+						"nieuws_info": {
 							"type": "SharedSlice"
 						}
 					}
