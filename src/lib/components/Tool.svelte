@@ -29,28 +29,56 @@
                 <p class="tool-description"><em>Description</em></p>
             </a>
         </article>
+        <article class="artoocle">
+            <a href="/tools">
+                <img src='/images/Sinterklaas.jpg' alt="ToolsSource">
+                <h3 class="tool-title">Canva</h3>
+                <p class="tool-description"><em>Design tool - Learn to design</em></p>
+            </a>
+        </article>
+        <article class="artoocle">
+            <a href="/tools">
+                <img src='/images/Sinterklaas.jpg' alt="ToolsSource">
+                <h3 class="tool-title">Source NAME</h3>
+                <p class="tool-description"><em>Description</em></p>
+            </a>
+        </article>
+        <article class="artoocle">
+            <a href="/tools">
+                <img src='/images/Sinterklaas.jpg' alt="ToolsSource">
+                <h3 class="tool-title">Source NAME</h3>
+                <p class="tool-description"><em>Description</em></p>
+            </a>
+        </article>
     </section>
 </main>
 
 <style> 
 
 main {
-    margin: 0 4em;
+    /* margin: 0 18rem; */
+    /* margin-left: 17rem; */
     border-radius: 0.8em;
 } 
 
 .article-wrapper {
     width: 100%;
-    margin: 2rem auto;
+    margin: 2rem;
     padding: 1em;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    justify-content: center;
+    /* gap: 2rem 0; */
 }    
 
 .artoocle {
-    width: 20rem;
-    height: 25rem;
+    /* flex: 0 1 calc(25% - 1%); */
+    /* min-width: 20rem; */
+    /* width: 33.3%; */
+    max-width: 30em;
+    min-width: 20em;
+    height: rem;
     border-radius: 1em;
     background-color: white;
     color: white;
@@ -78,7 +106,20 @@ h2 {
     font-size: 1.1rem;
     font-family: 'Inter SemiBold';
     padding: 1em 0;
-    margin-left: 5%
+    margin-left: 5%;
     
+}
+
+
+
+
+@media (min-width: 20rem) {
+    main {
+        margin: auto;
+    }
+    
+    /* .artoocle {
+        max-width: 25rem;
+    } */
 }
 </style>

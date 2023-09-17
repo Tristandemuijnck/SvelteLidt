@@ -2,7 +2,7 @@
     import DesktopNav from "$lib/components/landing/desktop/DesktopNav.svelte";
     import MobileNav from "$lib/components/landing/mobile/MobileNav.svelte";
 	import Tool from "$lib/components/Tool.svelte";
-	import Heading from "$lib/components/landing/Heading.svelte";
+	
     
 </script>
 
