@@ -1,35 +1,25 @@
+<script>
+    export let messages
+    // console.log(messages)
+</script>
+
 <section>
     <div class="filter-buttons">
         <button class="active">Algemeen</button>
         <button>Inspiratie</button>
     </div>
     <div class="channel-text-wrapper">
-        <div class="chat-msg">
-            <div class="msg-info">
-                <p><span>Siem</span> • 11-09-2023 12:11</p>
+        <!-- Loop through all messages -->
+        {#each messages as msg}
+            <div class="chat-msg">
+                <div class="msg-info">
+                    <p><span>{msg.name}</span> • {msg.time}</p>
+                </div>
+                <div class="msg-text">
+                    <p>{msg.content}</p>
+                </div>
             </div>
-            <div class="msg-text">
-                <p>Hoe maak ik een nieuwe slice aan?</p>
-            </div>
-        </div>
-
-        <div class="chat-msg">
-            <div class="msg-info">
-                <p><span>Stefan</span> • 11-09-2023 12:12</p>
-            </div>
-            <div class="msg-text">
-                <p>Druk op "add slice".</p>
-            </div>
-        </div>
-
-        <div class="chat-msg">
-            <div class="msg-info">
-                <p><span>Siem</span> • 11-09-2023 12:13</p>
-            </div>
-            <div class="msg-text">
-                <p>Bedankt!</p>
-            </div>
-        </div>
+        {/each}
     </div>
 </section>
 
@@ -70,6 +60,8 @@
         background: var(--light-primary);
         padding: 1rem;
         border-radius: var(--radius);
+        max-height: 25rem;
+        overflow-y: scroll;
     }
 
     .chat-msg{
@@ -98,6 +90,7 @@
     .msg-text p{
         font-size: 0.8rem;
         font-weight: 500;
-        color: var(--light-font-color);
+        color: var(--light-subheading-color);
+        line-height: 1.4;
     }
 </style>

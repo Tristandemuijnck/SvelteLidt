@@ -4,14 +4,14 @@
     import ChannelText from '../../lib/components/nieuws/ChannelText.svelte';
     import ChannelQuestion from '../../lib/components/nieuws/ChannelQuestion.svelte';
 
-    export let data;
+    export let data
 </script>
 
 <section>
-    <SliceZone slices={data.slices} {components}/>
+    <SliceZone slices={data.page.data.slices} {components}/>
 </section>
 
-<ChannelText />
+<ChannelText messages={data.allMessages} />
 
 <ChannelQuestion />
 
