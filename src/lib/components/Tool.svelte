@@ -56,29 +56,25 @@
 <style> 
 
 main {
-    /* margin: 0 18rem; */
-    /* margin-left: 17rem; */
     border-radius: 0.8em;
 } 
 
 .article-wrapper {
     width: 100%;
-    margin: 2rem;
     padding: 1em;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    /* gap: 2rem 0; */
+    gap: 1.5em;
 }    
 
 .artoocle {
     /* flex: 0 1 calc(25% - 1%); */
     /* min-width: 20rem; */
-    /* width: 33.3%; */
+    width: min(100% - 50px, 200px);
     max-width: 30em;
-    min-width: 20em;
-    height: rem;
+    min-width: 18em;
     border-radius: 1em;
     background-color: white;
     color: white;
