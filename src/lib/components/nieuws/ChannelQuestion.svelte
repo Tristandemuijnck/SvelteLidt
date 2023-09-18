@@ -1,3 +1,7 @@
+<script>
+    export let threads
+</script>
+
 <section>
     <h2>Code <span>Vragen</span></h2>
     <div class="filter-buttons">
@@ -10,50 +14,18 @@
         <button>SvelteKit</button>
     </div>
     <div class="channel-question-wrapper">
-        <div class="channel-question">
-            <div class="question-top">
-                <h3>Semantiek SvelteKit</h3>
-                <p>11 reacties</p>
+        {#each threads as thread}
+            <div class="channel-question">
+                <div class="question-top">
+                    <h3>{thread.title}</h3>
+                    <p>{thread.responses} reacties</p>
+                </div>
+                <div class="question-bottom">
+                    <p>{thread.time}</p>
+                    <img src="/icons/react.svg" alt="">
+                </div>
             </div>
-            <div class="question-bottom">
-                <p>6d geleden</p>
-                <img src="/icons/react.svg" alt="">
-            </div>
-        </div>
-
-        <div class="channel-question">
-            <div class="question-top">
-                <h3>Problemen met code pushen</h3>
-                <p>9 reacties</p>
-            </div>
-            <div class="question-bottom">
-                <p>8d geleden</p>
-                <img src="/icons/react.svg" alt="">
-            </div>
-        </div>
-
-        <div class="channel-question">
-            <div class="question-top">
-                <h3>Semantiek SvelteKit</h3>
-                <p>11 reacties</p>
-            </div>
-            <div class="question-bottom">
-                <p>9d geleden</p>
-                <img src="/icons/react.svg" alt="">
-            </div>
-        </div>
-
-        <div class="channel-question">
-            <div class="question-top">
-                <h3>Semantiek SvelteKit</h3>
-                <p>11 reacties</p>
-            </div>
-            <div class="question-bottom">
-                <p>9d geleden</p>
-                <img src="/icons/react.svg" alt="">
-            </div>
-        </div>
-
+        {/each}
     </div>
 </section>
 

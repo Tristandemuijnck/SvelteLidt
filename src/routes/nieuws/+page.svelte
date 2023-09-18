@@ -13,7 +13,7 @@
 
 <ChannelText messages={data.allMessages} />
 
-<ChannelQuestion />
+<ChannelQuestion threads={data.allThreads}/>
 
 <!-- <pre>
     {JSON.stringify(data.slices, null, 2)}

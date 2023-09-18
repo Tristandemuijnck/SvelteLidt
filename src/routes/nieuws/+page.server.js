@@ -5,7 +5,7 @@ export const prerender = true;
 const bearerToken = import.meta.env.VITE_BEARER_TOKEN
 
 const botChannelMsg = 'https://discord.com/api/channels/1017100388324880465/messages?limit=10'
-// const forumQuestions = 'https://discord.com/api/guilds/830885998962540544/threads/active'
+const forumQuestions = 'https://discord.com/api/guilds/1017099203882782750/threads/active'
 
 export async function load({ fetch, request }) {
 
@@ -22,16 +22,15 @@ export async function load({ fetch, request }) {
     })
 
     // Get Discord forum questions
-    // const forumData = await fetch(forumQuestions, {
-    //     method: "GET",
-    //     headers: {
-    //         Authorization: `Bot ${bearerToken}`
-    //     }
-    // })
+    const forumData = await fetch(forumQuestions, {
+        method: "GET",
+        headers: {
+            Authorization: `Bot ${bearerToken}`
+        }
+    })
 
     const msgs = await messagesData.json()
-    // console.log(msgs)
-    // const questions = await forumData.json()
+    const questions = await forumData.json()
 
     // Create new object with all desired datafields from messages
     const allMessages = msgs.map(msg => {
@@ -48,17 +47,61 @@ export async function load({ fetch, request }) {
     })
 
     // Create new object with all desired datafields from forum questions
-    // const allThreads = questions.threads.map(question => {
-    //     return {
-    //         id: question.id,
-    //         title: question.name,
-    //         author: question.owner_id,
-    //         responses: question.message_count,
-    //         time: question.thread_metadata.create_timestamp
-    //     }
-    // })
+    const allThreads = questions.threads.map(thread => {
+        const d = new Date(thread.thread_metadata.create_timestamp)
 
-	return { page, allMessages }
+        // Get difference between current time and thread creation time
+        const diff = Math.abs(new Date() - d)
+        const hours = Math.floor(diff / 3600000)
+        console.log(hours)
 
-    // allThreads
+        // If more than 24 hours ago created
+        if (hours > 24) {
+            const days = Math.floor(hours / 24)
+
+            // If multiple days ago created, else if 1 day ago created
+            if (days > 1) {
+                return {
+                    id: thread.id,
+                    title: thread.name,
+                    author: thread.owner_id,
+                    responses: thread.message_count,
+                    time: days + ' dagen geleden'
+                }
+            } else {
+                return {
+                    id: thread.id,
+                    title: thread.name,
+                    author: thread.owner_id,
+                    responses: thread.message_count,
+                    time: days + ' dag geleden'
+                }
+            }
+         // If less than 24 hours ago created
+        } else {
+            const minutes = Math.floor(diff / 60000)
+
+            // If less than 1 hour ago created
+            if (hours < 1) {
+                return {
+                    id: thread.id,
+                    title: thread.name,
+                    author: thread.owner_id,
+                    responses: thread.message_count,
+                    time: minutes + ' minuten geleden'
+                }
+            // If 1 or more hours ago created
+            } else {
+                return {
+                    id: thread.id,
+                    title: thread.name,
+                    author: thread.owner_id,
+                    responses: thread.message_count,
+                    time: hours + ' uur geleden'
+                }
+            }
+        }
+    })
+
+	return { page, allMessages, allThreads }
 }

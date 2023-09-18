@@ -1,6 +1,5 @@
 <script>
     export let messages
-    // console.log(messages)
 </script>
 
 <section>
