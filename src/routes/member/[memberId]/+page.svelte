@@ -1,4 +1,6 @@
 <script>
+    import { SliceZone } from '@prismicio/svelte'
+    import { components } from '$lib/slices'
     import Heading from "../lib/components/landing/Heading.svelte";
     import Notitie from "../lib/components/landing/Notitie.svelte";
     import Progress from "../lib/components/landing/Progress.svelte";
@@ -6,32 +8,15 @@
     import DesktopNav from "../lib/components/landing/desktop/DesktopNav.svelte";
     import MobileNav from "../lib/components/landing/mobile/MobileNav.svelte";
     import SquadInfo from "../lib/components/landing/SquadInfo.svelte";
+
+    export let data;
 </script>
 
 <Heading />
 
 <DesktopNav />
 
-<Notitie />
+<section>
+    <SliceZone slices={data.slices} {components}/>
+</section>
 
-<Progress />
-
-<h2>Recente notities</h2>
-
-<Recent />
-
-<MobileNav />
-
-<SquadInfo />
-
-<style>
-    :root {
-        --color-default: #03061D;
-    }
-
-    h2{
-        font-size: var(--unit-default);
-        font-family: 'Inter SemiBold';
-        margin-left: 5%;
-    }
-</style>

@@ -528,7 +528,7 @@
             display: block;
             font-family: 'Inter', sans-serif;
             height: 100vh;
-            padding: 1rem;
+            padding: var(--unit-default);
             position: fixed;
             top: 0;
             width: 16rem;
@@ -546,7 +546,7 @@
         li {
             display: flex;
             justify-content: center;
-            margin: 1rem 0;
+            margin: var(--unit-default) 0;
             width: fit-content;
 }
 
@@ -554,8 +554,8 @@
             align-items: center;
             color: var(--color-default);
             display: flex;
-            gap: 0.5rem;
-            padding: 0.5rem;
+            gap: var(--unit-medium);
+            padding: var(--unit-medium);
             position: relative;
             text-decoration: none;
             transition: 0.2s ease-in-out;
@@ -593,7 +593,7 @@
         .logo {
             display: block;
             margin: 0 auto;
-            padding-bottom: 1rem;
+            padding-bottom: var(--unit-default);
             width: 9rem;
 }
 }

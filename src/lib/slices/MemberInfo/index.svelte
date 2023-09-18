@@ -26,8 +26,8 @@
 
     article {
         background-color: white;
-        border-radius: 1rem;
-        padding: 1rem;
+        border-radius: var(--unit-default);
+        padding: var(--unit-default);
         width: 14rem;
         height: 18rem;
         position: relative;
@@ -36,8 +36,8 @@
     article a {
         color: inherit;
         position: absolute;
-        bottom: 1rem;
-        left: 1rem;
+        bottom: var(--unit-default);
+        left: var(--unit-default);
         transform: rotate(0deg);
         transition: 0.3s ease-in-out;
     }
@@ -60,7 +60,7 @@
 
 	img {
         aspect-ratio: 1/1;
-        border-radius: 0.25rem;
+        border-radius: var(--unit-small);
         margin-bottom: 0rem;
         object-fit: cover;
         width: 100%;
@@ -68,7 +68,7 @@
 
 	/* Typography */
 	h3 {
-        font-size: 1rem;
+        font-size: var(--unit-default);
     }
 
 	em {
@@ -81,7 +81,7 @@
 	@media (min-width: 64rem) {
         header {
             margin-left: 18rem;
-            padding: 1rem 0;
+            padding: var(--unit-default) 0;
         }
 
         section {
@@ -90,21 +90,21 @@
             flex-wrap: wrap;
             justify-content: start;
             gap: 1.25em;
-            margin: 0 0 1rem 18rem;
+            margin: 0 0 var(--unit-default) 18rem;
             width: 72vw;
         }
 
         article {
             background-color: white;
-            border-radius: 1rem;
-            padding: 1rem;
+            border-radius: var(--unit-default);
+            padding: var(--unit-default);
             width: 14rem;
         }
 
         img {
             aspect-ratio: 1/1;
-            border-radius: 0.25rem;
-            margin-bottom: 1rem;
+            border-radius: var(--unit-small);
+            margin-bottom: var(--unit-default);
             object-fit: cover;
             width: 100%;
             height: auto;
