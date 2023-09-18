@@ -4,7 +4,7 @@
 
 <section>
     <h2>Code <span>Vragen</span></h2>
-    <div class="filter-buttons">
+    <!-- <div class="filter-buttons">
         <button>HTML</button>
         <button>JavaScript</button>
         <button>CSS</button>
@@ -12,7 +12,7 @@
         <button>Git</button>
         <button>NodeJs</button>
         <button>SvelteKit</button>
-    </div>
+    </div> -->
     <div class="channel-question-wrapper">
         {#each threads as thread}
             <div class="channel-question">
@@ -42,7 +42,7 @@
     h2{
         font-size: 1.2rem;
         font-weight: 600;
-        margin-bottom: 0.2rem;
+        margin-bottom: 1.2rem;
     }
 
     h2 span{
