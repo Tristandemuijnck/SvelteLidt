@@ -17,6 +17,9 @@
 				"fieldset": "Slice Zone",
 				"config": {
 					"choices": {
+						"member_info": {
+							"type": "SharedSlice"
+						},
 						"squad_info": {
 							"type": "SharedSlice"
 						}

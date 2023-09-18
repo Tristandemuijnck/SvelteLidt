@@ -11,6 +11,6 @@
 	<SliceZone slices={slice.slices} {components}/>
 </section>
 
-<pre>
+<!-- <pre>
 	{JSON.stringify(slice, null, 3)}
-</pre>
+</pre> -->

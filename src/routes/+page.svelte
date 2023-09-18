@@ -5,6 +5,7 @@
     import Recent from "../lib/components/landing/Recent.svelte";
     import DesktopNav from "../lib/components/landing/desktop/DesktopNav.svelte";
     import MobileNav from "../lib/components/landing/mobile/MobileNav.svelte";
+    import SquadInfo from "../lib/components/landing/SquadInfo.svelte";
 </script>
 
 <Heading />
@@ -20,6 +21,8 @@
 <Recent />
 
 <MobileNav />
+
+<SquadInfo />
 
 <style>
     :root {

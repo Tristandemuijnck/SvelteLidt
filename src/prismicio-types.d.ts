@@ -37,7 +37,7 @@ export type MemberDocument<Lang extends string = string> = prismic.PrismicDocume
 	Lang
 >;
 
-type SquadDocumentDataSlicesSlice = SquadInfoSlice;
+type SquadDocumentDataSlicesSlice = MemberInfoSlice | SquadInfoSlice;
 
 /**
  * Content for Squad documents
@@ -70,7 +70,7 @@ export type SquadDocument<Lang extends string = string> = prismic.PrismicDocumen
 	Lang
 >;
 
-type Squad2DocumentDataSlicesSlice = SquadInfoSlice;
+type Squad2DocumentDataSlicesSlice = MemberInfoSlice | SquadInfoSlice;
 
 /**
  * Content for Squad2 documents

@@ -1,15 +1,27 @@
 <script>
-	/** @type {import("@prismicio/client").Content.MemberInfoSlice} */
-	export let slice;
+    import { SliceZone } from '@prismicio/svelte'
+    import { components } from '$lib/slices'
+	import DesktopNav from '../../../lib/components/landing/desktop/DesktopNav.svelte';
+	import MobileNav from '../../../lib/components/landing/mobile/MobileNav.svelte';
+
+    export let data;
 </script>
 
-<article data-slice-type={slice.slice_type} data-slice-variation={slice.variation}>
-		<img src={slice.primary.image.url} alt="Foto van {slice.primary.firstname} {slice.primary.lastname}" />
-		<a href="/member">
-			<h2>{slice.primary.firstname}</h2>
-			<h3>{slice.primary.lastname}</h3>
-		</a>
-</article>
+<DesktopNav />
+
+<MobileNav />
+
+<header>
+	<h1>Vrienden van <em>Stefan</em></h1>
+</header>
+
+<section>
+    <SliceZone slices={data.slices} {components}/>
+</section>
+
+<!-- <pre>
+    {JSON.stringify(data, null, 2)}
+</pre> -->
 
 <style>
 
@@ -23,7 +35,6 @@
         margin: 0 auto;
         width: 90vw;
     }
-
     article {
         background-color: white;
         border-radius: 1rem;
@@ -61,7 +72,7 @@
 	img {
         aspect-ratio: 1/1;
         border-radius: 0.25rem;
-        margin-bottom: 0rem;
+        margin-bottom: 1rem;
         object-fit: cover;
         width: 100%;
     }
