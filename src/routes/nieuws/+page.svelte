@@ -11,7 +11,7 @@
     <SliceZone slices={data.page.data.slices} {components}/>
 </section>
 
-<ChannelText messages={data.allMessages} />
+<ChannelText generalChannelMsg={data.allMessages} inspoChannelMsg={data.allInspo} />
 
 <ChannelQuestion threads={data.allThreads}/>
 

@@ -4,7 +4,8 @@
 
 <section>
     <h2>Code <span>Vragen</span></h2>
-    <!-- <div class="filter-buttons">
+
+    <div class="filter-buttons">
         <button>HTML</button>
         <button>JavaScript</button>
         <button>CSS</button>
@@ -12,7 +13,8 @@
         <button>Git</button>
         <button>NodeJs</button>
         <button>SvelteKit</button>
-    </div> -->
+    </div>
+
     <div class="channel-question-wrapper">
         {#each threads as thread}
             <div class="channel-question">
@@ -42,7 +44,7 @@
     h2{
         font-size: 1.2rem;
         font-weight: 600;
-        margin-bottom: 1.2rem;
+        margin-bottom: 0.2rem;
     }
 
     h2 span{
@@ -54,8 +56,8 @@
     .filter-buttons{
         display: flex;
         column-gap: 0.5rem;
-        margin-bottom: 1rem;
-        margin-top: 0.8rem;
+        /* margin-bottom: 0.5rem; */
+        /* margin-top: 0.4rem; */
         position: sticky;
         top: 4rem;
         overflow-x: scroll;
@@ -82,8 +84,8 @@
         display: flex;
         flex-direction: column;
         row-gap: 1rem;
-        /* overflow-y: scroll;
-        max-height: 20rem; */
+        overflow-y: scroll;
+        max-height: 20rem;
     }
 
     .channel-question{
@@ -99,7 +101,7 @@
         display: flex;
         flex-direction: column;
         row-gap: 0.8rem;
-        max-width: 65%;
+        max-width: 61%;
     }
 
     h3{
@@ -124,7 +126,7 @@
     }
 
     .question-bottom p{
-        font-size: 0.8rem;
+        font-size: 0.7rem;
         font-weight: 500;
         color: var(--light-subheading-color);
     }

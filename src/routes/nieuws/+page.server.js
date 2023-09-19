@@ -5,6 +5,7 @@ export const prerender = true;
 const bearerToken = import.meta.env.VITE_BEARER_TOKEN
 
 const botChannelMsg = 'https://discord.com/api/channels/1017100388324880465/messages?limit=10'
+const inspoChannelMsg = 'https://discord.com/api/channels/1149701698504368180/messages?limit=10'
 const forumQuestions = 'https://discord.com/api/guilds/1017099203882782750/threads/active'
 
 export async function load({ fetch, request }) {
@@ -13,8 +14,16 @@ export async function load({ fetch, request }) {
 	const client = createClient({ fetch, request });
 	const page = await client.getByUID('nieuws', 'nieuws');
 
-    // Get Discord messages
+    // Get Discord messages general channel
     const messagesData = await fetch(botChannelMsg, {
+        method: "GET",
+        headers:{
+            Authorization: `Bot ${bearerToken}`
+        }
+    })
+
+    // Get Discord messages inspo channel
+    const inspoData = await fetch(inspoChannelMsg, {
         method: "GET",
         headers:{
             Authorization: `Bot ${bearerToken}`
@@ -29,11 +38,27 @@ export async function load({ fetch, request }) {
         }
     })
 
+
     const msgs = await messagesData.json()
+    const inspoMsgs = await inspoData.json()
     const questions = await forumData.json()
 
     // Create new object with all desired datafields from messages
     const allMessages = msgs.map(msg => {
+        const d = new Date(msg.timestamp)
+        let date =  d.getDate() + '-' + (d.getMonth() + 1) + '-' + d.getFullYear() + ' ' + d.getHours() + ':' + d.getMinutes()
+
+        return {
+            id: msg.id,
+            content: msg.content,
+            author: msg.author.username,
+            name: msg.author.global_name,
+            time: date
+        }
+    })
+
+    // Create new object with all desired datafields from inspo messages
+    const allInspo = inspoMsgs.map(msg => {
         const d = new Date(msg.timestamp)
         let date =  d.getDate() + '-' + (d.getMonth() + 1) + '-' + d.getFullYear() + ' ' + d.getHours() + ':' + d.getMinutes()
 
@@ -53,7 +78,7 @@ export async function load({ fetch, request }) {
         // Get difference between current time and thread creation time
         const diff = Math.abs(new Date() - d)
         const hours = Math.floor(diff / 3600000)
-        console.log(hours)
+        // console.log(hours)
 
         // If more than 24 hours ago created
         if (hours > 24) {
@@ -103,5 +128,5 @@ export async function load({ fetch, request }) {
         }
     })
 
-	return { page, allMessages, allThreads }
+	return { page, allMessages, allThreads, allInspo }
 }

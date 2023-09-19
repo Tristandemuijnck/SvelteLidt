@@ -1,18 +1,53 @@
 <script>
-    export let messages
+    export let generalChannelMsg
+    export let inspoChannelMsg
+
+    let general
+    let inspo
+    let generalChannel
+    let inspoChannel
+
+    function changeChannel(){
+        general.classList.toggle('active')
+        inspo.classList.toggle('active')
+        generalChannel.classList.toggle('hidden-channel')
+        inspoChannel.classList.toggle('hidden-channel')
+    }
 </script>
 
 <section>
     <div class="filter-buttons">
-        <button class="active">Algemeen</button>
-        <button>Inspiratie</button>
+        <button class="active" bind:this={general} on:click={changeChannel}>Algemeen</button>
+        <button bind:this={inspo} on:click={changeChannel}>Inspiratie</button>
     </div>
-    <div class="channel-text-wrapper">
+    <div class="channel-text-wrapper" bind:this={generalChannel}>
         <!-- Loop through all messages -->
-        {#each messages as msg}
+        {#each generalChannelMsg as msg}
             <div class="chat-msg">
                 <div class="msg-info">
-                    <p><span>{msg.name}</span> • {msg.time}</p>
+                    {#if msg.name === null}
+                        <p><span>{msg.author}</span> • {msg.time}</p>
+                    {:else}
+                        <p><span>{msg.name}</span> • {msg.time}</p>
+                    {/if}
+                </div>
+                <div class="msg-text">
+                    <p>{msg.content}</p>
+                </div>
+            </div>
+        {/each}
+    </div>
+
+    <div class="channel-text-wrapper hidden-channel" bind:this={inspoChannel}>
+        <!-- Loop through all messages -->
+        {#each inspoChannelMsg as msg}
+            <div class="chat-msg">
+                <div class="msg-info">
+                    {#if msg.name === null}
+                        <p><span>{msg.author}</span> • {msg.time}</p>
+                    {:else}
+                        <p><span>{msg.name}</span> • {msg.time}</p>
+                    {/if}
                 </div>
                 <div class="msg-text">
                     <p>{msg.content}</p>
@@ -61,6 +96,11 @@
         border-radius: var(--radius);
         max-height: 25rem;
         overflow-y: scroll;
+        border: solid 4px var(--light-primary);
+    }
+
+    .hidden-channel{
+        display: none;
     }
 
     .chat-msg{
