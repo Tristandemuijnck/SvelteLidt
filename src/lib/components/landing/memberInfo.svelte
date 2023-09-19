@@ -7,10 +7,12 @@
 	export let slice;
 </script>
 
-<section data-slice-type={slice.slice_type} data-slice-variation={slice.variation}>
-	<SliceZone slices={slice.slices} {components}/>
+<section data-slice-type={slice.slice_type} data-slice-variation={slice.variation} class="friends-overview">
+    <SliceZone slices={slice.slices} {components}/>
 </section>
 
+
 <pre>
-	{JSON.stringify(slice, null, 4)}
+    {JSON.stringify(slice, null, 2)}
 </pre>
+

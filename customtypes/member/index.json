@@ -12,15 +12,45 @@
 				},
 				"type": "UID"
 			},
+			"memberimage": {
+				"type": "Image",
+				"config": {
+					"label": "MemberImage",
+					"constraint": {},
+					"thumbnails": []
+				}
+			},
+			"firstname": {
+				"type": "StructuredText",
+				"config": {
+					"label": "FirstName",
+					"placeholder": "",
+					"allowTargetBlank": true,
+					"single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+				}
+			},
+			"lastname": {
+				"type": "StructuredText",
+				"config": {
+					"label": "LastName",
+					"placeholder": "",
+					"allowTargetBlank": true,
+					"single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+				}
+			},
+			"githubhandle": {
+				"type": "Link",
+				"config": {
+					"label": "GithubHandle",
+					"placeholder": "",
+					"select": null
+				}
+			},
 			"slices": {
 				"type": "Slices",
 				"fieldset": "Slice Zone",
 				"config": {
-					"choices": {
-						"member_info": {
-							"type": "SharedSlice"
-						}
-					}
+					"choices": {}
 				}
 			}
 		}

@@ -25,6 +25,9 @@
 
 <style>
 
+    pre {
+        margin-left: 18rem;
+    }
     /* Layout */
     section {
         display: flex;

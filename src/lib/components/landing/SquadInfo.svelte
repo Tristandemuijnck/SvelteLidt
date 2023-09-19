@@ -12,8 +12,8 @@
 	<h1>Vrienden van <em>Stefan</em></h1>
 </header>
 
-<section data-slice-type={slice.slice_type} data-slice-variation={slice.variation} class="friends-overview">
-    <SliceZone slices={data.slices} {components}/>
+<section data-slice-type={slice.slice_type} data-slice-variation={slice.variation}>
+	<SliceZone slices={slice.slices} {components}/>
 </section>
 
 <!-- <style>

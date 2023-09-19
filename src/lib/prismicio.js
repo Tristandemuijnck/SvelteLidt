@@ -18,7 +18,7 @@ const routes = [
 	{
 		type: 'squad',
 		path: '/:uid'
-	}
+	},
 ];
 
 /**

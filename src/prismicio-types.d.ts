@@ -4,12 +4,121 @@ import type * as prismic from '@prismicio/client';
 
 type Simplify<T> = { [KeyType in keyof T]: T[KeyType] };
 
-type MemberDocumentDataSlicesSlice = MemberInfoSlice;
+type DetailpageDocumentDataSlicesSlice = never;
+
+/**
+ * Content for detailpage documents
+ */
+interface DetailpageDocumentData {
+	/**
+	 * Slice Zone field in *detailpage*
+	 *
+	 * - **Field Type**: Slice Zone
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: detailpage.slices[]
+	 * - **Tab**: Main
+	 * - **Documentation**: https://prismic.io/docs/field#slices
+	 */
+	slices: prismic.SliceZone<DetailpageDocumentDataSlicesSlice>
+	/**
+	 * Meta Description field in *detailpage*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: A brief summary of the page
+	 * - **API ID Path**: detailpage.meta_description
+	 * - **Tab**: SEO & Metadata
+	 * - **Documentation**: https://prismic.io/docs/field#key-text
+	 */;
+	meta_description: prismic.KeyTextField;
+
+	/**
+	 * Meta Image field in *detailpage*
+	 *
+	 * - **Field Type**: Image
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: detailpage.meta_image
+	 * - **Tab**: SEO & Metadata
+	 * - **Documentation**: https://prismic.io/docs/field#image
+	 */
+	meta_image: prismic.ImageField<never>;
+
+	/**
+	 * Meta Title field in *detailpage*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: A title of the page used for social media and search engines
+	 * - **API ID Path**: detailpage.meta_title
+	 * - **Tab**: SEO & Metadata
+	 * - **Documentation**: https://prismic.io/docs/field#key-text
+	 */
+	meta_title: prismic.KeyTextField;
+}
+
+/**
+ * detailpage document from Prismic
+ *
+ * - **API ID**: `detailpage`
+ * - **Repeatable**: `true`
+ * - **Documentation**: https://prismic.io/docs/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type DetailpageDocument<Lang extends string = string> = prismic.PrismicDocumentWithUID<
+	Simplify<DetailpageDocumentData>,
+	'detailpage',
+	Lang
+>;
+
+type MemberDocumentDataSlicesSlice = never;
 
 /**
  * Content for Member documents
  */
 interface MemberDocumentData {
+	/**
+	 * MemberImage field in *Member*
+	 *
+	 * - **Field Type**: Image
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: member.memberimage
+	 * - **Tab**: Main
+	 * - **Documentation**: https://prismic.io/docs/field#image
+	 */
+	memberimage: prismic.ImageField<never>;
+
+	/**
+	 * FirstName field in *Member*
+	 *
+	 * - **Field Type**: Rich Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: member.firstname
+	 * - **Tab**: Main
+	 * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+	 */
+	firstname: prismic.RichTextField;
+
+	/**
+	 * LastName field in *Member*
+	 *
+	 * - **Field Type**: Rich Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: member.lastname
+	 * - **Tab**: Main
+	 * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+	 */
+	lastname: prismic.RichTextField;
+
+	/**
+	 * GithubHandle field in *Member*
+	 *
+	 * - **Field Type**: Link
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: member.githubhandle
+	 * - **Tab**: Main
+	 * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+	 */
+	githubhandle: prismic.LinkField;
+
 	/**
 	 * Slice Zone field in *Member*
 	 *
@@ -37,7 +146,72 @@ export type MemberDocument<Lang extends string = string> = prismic.PrismicDocume
 	Lang
 >;
 
-type SquadDocumentDataSlicesSlice = MemberInfoSlice | SquadInfoSlice;
+type Member2DocumentDataSlicesSlice = MemberInformationSlice;
+
+/**
+ * Content for Member documents
+ */
+interface Member2DocumentData {
+	/**
+	 * Slice Zone field in *Member*
+	 *
+	 * - **Field Type**: Slice Zone
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: member2.slices[]
+	 * - **Tab**: Main
+	 * - **Documentation**: https://prismic.io/docs/field#slices
+	 */
+	slices: prismic.SliceZone<Member2DocumentDataSlicesSlice>
+	/**
+	 * Meta Description field in *Member*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: A brief summary of the page
+	 * - **API ID Path**: member2.meta_description
+	 * - **Tab**: SEO & Metadata
+	 * - **Documentation**: https://prismic.io/docs/field#key-text
+	 */;
+	meta_description: prismic.KeyTextField;
+
+	/**
+	 * Meta Image field in *Member*
+	 *
+	 * - **Field Type**: Image
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: member2.meta_image
+	 * - **Tab**: SEO & Metadata
+	 * - **Documentation**: https://prismic.io/docs/field#image
+	 */
+	meta_image: prismic.ImageField<never>;
+
+	/**
+	 * Meta Title field in *Member*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: A title of the page used for social media and search engines
+	 * - **API ID Path**: member2.meta_title
+	 * - **Tab**: SEO & Metadata
+	 * - **Documentation**: https://prismic.io/docs/field#key-text
+	 */
+	meta_title: prismic.KeyTextField;
+}
+
+/**
+ * Member document from Prismic
+ *
+ * - **API ID**: `member2`
+ * - **Repeatable**: `true`
+ * - **Documentation**: https://prismic.io/docs/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type Member2Document<Lang extends string = string> = prismic.PrismicDocumentWithUID<
+	Simplify<Member2DocumentData>,
+	'member2',
+	Lang
+>;
+
+type SquadDocumentDataSlicesSlice = MemberInformationSlice | SquadInfoSlice;
 
 /**
  * Content for Squad documents
@@ -70,14 +244,14 @@ export type SquadDocument<Lang extends string = string> = prismic.PrismicDocumen
 	Lang
 >;
 
-type Squad2DocumentDataSlicesSlice = MemberInfoSlice | SquadInfoSlice;
+type Squad2DocumentDataSlicesSlice = MemberInformationSlice | SquadInfoSlice;
 
 /**
- * Content for Squad2 documents
+ * Content for Squad documents
  */
 interface Squad2DocumentData {
 	/**
-	 * Slice Zone field in *Squad2*
+	 * Slice Zone field in *Squad*
 	 *
 	 * - **Field Type**: Slice Zone
 	 * - **Placeholder**: *None*
@@ -87,7 +261,7 @@ interface Squad2DocumentData {
 	 */
 	slices: prismic.SliceZone<Squad2DocumentDataSlicesSlice>
 	/**
-	 * Meta Description field in *Squad2*
+	 * Meta Description field in *Squad*
 	 *
 	 * - **Field Type**: Text
 	 * - **Placeholder**: A brief summary of the page
@@ -98,7 +272,7 @@ interface Squad2DocumentData {
 	meta_description: prismic.KeyTextField;
 
 	/**
-	 * Meta Image field in *Squad2*
+	 * Meta Image field in *Squad*
 	 *
 	 * - **Field Type**: Image
 	 * - **Placeholder**: *None*
@@ -109,7 +283,7 @@ interface Squad2DocumentData {
 	meta_image: prismic.ImageField<never>;
 
 	/**
-	 * Meta Title field in *Squad2*
+	 * Meta Title field in *Squad*
 	 *
 	 * - **Field Type**: Text
 	 * - **Placeholder**: A title of the page used for social media and search engines
@@ -121,7 +295,7 @@ interface Squad2DocumentData {
 }
 
 /**
- * Squad2 document from Prismic
+ * Squad document from Prismic
  *
  * - **API ID**: `squad2`
  * - **Repeatable**: `true`
@@ -168,79 +342,88 @@ export type ToolsDocument<Lang extends string = string> = prismic.PrismicDocumen
 	Lang
 >;
 
-export type AllDocumentTypes = MemberDocument | SquadDocument | Squad2Document | ToolsDocument;
+export type AllDocumentTypes =
+	| DetailpageDocument
+	| MemberDocument
+	| Member2Document
+	| SquadDocument
+	| Squad2Document
+	| ToolsDocument;
 
 /**
- * Primary content in *MemberInfo → Primary*
+ * Primary content in *MemberInformation → Primary*
  */
-export interface MemberInfoSliceDefaultPrimary {
+export interface MemberInformationSliceDefaultPrimary {
 	/**
-	 * image field in *MemberInfo → Primary*
+	 * MainImage field in *MemberInformation → Primary*
 	 *
 	 * - **Field Type**: Image
 	 * - **Placeholder**: *None*
-	 * - **API ID Path**: member_info.primary.image
+	 * - **API ID Path**: member_information.primary.mainimage
 	 * - **Documentation**: https://prismic.io/docs/field#image
 	 */
-	image: prismic.ImageField<never>;
+	mainimage: prismic.ImageField<never>;
 
 	/**
-	 * firstName field in *MemberInfo → Primary*
+	 * FirstName field in *MemberInformation → Primary*
 	 *
-	 * - **Field Type**: Text
+	 * - **Field Type**: Rich Text
 	 * - **Placeholder**: *None*
-	 * - **API ID Path**: member_info.primary.firstname
-	 * - **Documentation**: https://prismic.io/docs/field#key-text
+	 * - **API ID Path**: member_information.primary.firstname
+	 * - **Documentation**: https://prismic.io/docs/field#rich-text-title
 	 */
-	firstname: prismic.KeyTextField;
+	firstname: prismic.RichTextField;
 
 	/**
-	 * lastName field in *MemberInfo → Primary*
+	 * LastName field in *MemberInformation → Primary*
 	 *
-	 * - **Field Type**: Text
+	 * - **Field Type**: Rich Text
 	 * - **Placeholder**: *None*
-	 * - **API ID Path**: member_info.primary.lastname
-	 * - **Documentation**: https://prismic.io/docs/field#key-text
+	 * - **API ID Path**: member_information.primary.lastname
+	 * - **Documentation**: https://prismic.io/docs/field#rich-text-title
 	 */
-	lastname: prismic.KeyTextField;
+	lastname: prismic.RichTextField;
 
 	/**
-	 * link field in *MemberInfo → Primary*
+	 * GithubHandle field in *MemberInformation → Primary*
 	 *
 	 * - **Field Type**: Link
 	 * - **Placeholder**: *None*
-	 * - **API ID Path**: member_info.primary.link
+	 * - **API ID Path**: member_information.primary.githubhandle
 	 * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
 	 */
-	link: prismic.LinkField;
+	githubhandle: prismic.LinkField;
 }
 
 /**
- * Default variation for MemberInfo Slice
+ * Default variation for MemberInformation Slice
  *
  * - **API ID**: `default`
  * - **Description**: Default
  * - **Documentation**: https://prismic.io/docs/slice
  */
-export type MemberInfoSliceDefault = prismic.SharedSliceVariation<
+export type MemberInformationSliceDefault = prismic.SharedSliceVariation<
 	'default',
-	Simplify<MemberInfoSliceDefaultPrimary>,
+	Simplify<MemberInformationSliceDefaultPrimary>,
 	never
 >;
 
 /**
- * Slice variation for *MemberInfo*
+ * Slice variation for *MemberInformation*
  */
-type MemberInfoSliceVariation = MemberInfoSliceDefault;
+type MemberInformationSliceVariation = MemberInformationSliceDefault;
 
 /**
- * MemberInfo Shared Slice
+ * MemberInformation Shared Slice
  *
- * - **API ID**: `member_info`
- * - **Description**: MemberInfo
+ * - **API ID**: `member_information`
+ * - **Description**: MemberInformation
  * - **Documentation**: https://prismic.io/docs/slice
  */
-export type MemberInfoSlice = prismic.SharedSlice<'member_info', MemberInfoSliceVariation>;
+export type MemberInformationSlice = prismic.SharedSlice<
+	'member_information',
+	MemberInformationSliceVariation
+>;
 
 /**
  * Primary content in *SquadInfo → Primary*
@@ -381,9 +564,15 @@ declare module '@prismicio/client' {
 
 	namespace Content {
 		export type {
+			DetailpageDocument,
+			DetailpageDocumentData,
+			DetailpageDocumentDataSlicesSlice,
 			MemberDocument,
 			MemberDocumentData,
 			MemberDocumentDataSlicesSlice,
+			Member2Document,
+			Member2DocumentData,
+			Member2DocumentDataSlicesSlice,
 			SquadDocument,
 			SquadDocumentData,
 			SquadDocumentDataSlicesSlice,
@@ -394,10 +583,10 @@ declare module '@prismicio/client' {
 			ToolsDocumentData,
 			ToolsDocumentDataSlicesSlice,
 			AllDocumentTypes,
-			MemberInfoSlice,
-			MemberInfoSliceDefaultPrimary,
-			MemberInfoSliceVariation,
-			MemberInfoSliceDefault,
+			MemberInformationSlice,
+			MemberInformationSliceDefaultPrimary,
+			MemberInformationSliceVariation,
+			MemberInformationSliceDefault,
 			SquadInfoSlice,
 			SquadInfoSliceDefaultPrimary,
 			SquadInfoSliceDefaultItem,

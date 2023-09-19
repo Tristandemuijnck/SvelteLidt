@@ -1,6 +1,6 @@
 {
-	"id": "squad2",
-	"label": "Squad",
+	"id": "member2",
+	"label": "Member",
 	"format": "page",
 	"repeatable": true,
 	"status": true,
@@ -18,9 +18,6 @@
 				"config": {
 					"choices": {
 						"member_information": {
-							"type": "SharedSlice"
-						},
-						"squad_info": {
 							"type": "SharedSlice"
 						}
 					}

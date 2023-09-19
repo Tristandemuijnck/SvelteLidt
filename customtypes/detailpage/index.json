@@ -1,6 +1,6 @@
 {
-	"id": "squad2",
-	"label": "Squad",
+	"id": "detailpage",
+	"label": "detailpage",
 	"format": "page",
 	"repeatable": true,
 	"status": true,
@@ -16,14 +16,7 @@
 				"type": "Slices",
 				"fieldset": "Slice Zone",
 				"config": {
-					"choices": {
-						"member_information": {
-							"type": "SharedSlice"
-						},
-						"squad_info": {
-							"type": "SharedSlice"
-						}
-					}
+					"choices": {}
 				}
 			}
 		},

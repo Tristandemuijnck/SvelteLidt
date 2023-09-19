@@ -1,0 +1,53 @@
+{
+  "id": "member_information",
+  "type": "SharedSlice",
+  "name": "MemberInformation",
+  "description": "MemberInformation",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "mainimage": {
+          "type": "Image",
+          "config": {
+            "label": "MainImage",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "firstname": {
+          "type": "StructuredText",
+          "config": {
+            "label": "FirstName",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          }
+        },
+        "lastname": {
+          "type": "StructuredText",
+          "config": {
+            "label": "LastName",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          }
+        },
+        "githubhandle": {
+          "type": "Link",
+          "config": {
+            "label": "GithubHandle",
+            "placeholder": "",
+            "select": null
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}
