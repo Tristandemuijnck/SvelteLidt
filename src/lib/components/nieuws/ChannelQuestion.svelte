@@ -130,4 +130,32 @@
         font-weight: 500;
         color: var(--light-subheading-color);
     }
+
+    @media (min-width: 425px){
+        .question-top{
+            max-width: 70%;
+        }
+    }
+
+    @media (min-width: 1024px){
+        section{
+            width: 40%;
+            margin-top: 0;
+            margin-bottom: 3rem;
+        }
+
+        .channel-question-wrapper{
+            max-height: 35rem;
+        }
+    }
+
+    @media (min-width: 1440px){
+        section{
+            width: 50%;
+        }
+
+        .question-top{
+            max-width: 83%;
+        }
+    }
 </style>

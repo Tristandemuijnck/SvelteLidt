@@ -132,4 +132,20 @@
         color: var(--light-subheading-color);
         line-height: 1.4;
     }
+
+    @media (min-width: 1024px){
+        section{
+            width: 60%;
+        }
+
+        .channel-text-wrapper{
+            max-height: 35rem;
+        }
+    }
+
+    @media (min-width: 1440px){
+        section{
+            width: 50%;
+        }
+    }
 </style>

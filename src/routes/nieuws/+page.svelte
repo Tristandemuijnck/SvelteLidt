@@ -7,18 +7,38 @@
     export let data
 </script>
 
-<section>
-    <SliceZone slices={data.page.data.slices} {components}/>
-</section>
+<main>
+    <section>
+        <SliceZone slices={data.page.data.slices} {components}/>
+    </section>
 
-<ChannelText generalChannelMsg={data.allMessages} inspoChannelMsg={data.allInspo} />
+    <section class="content">
+        <ChannelText generalChannelMsg={data.allMessages} inspoChannelMsg={data.allInspo} />
 
-<ChannelQuestion threads={data.allThreads}/>
+        <ChannelQuestion threads={data.allThreads}/>
+    </section>
+</main>
 
 <!-- <pre>
     {JSON.stringify(data.slices, null, 2)}
 </pre> -->
 
 <style>
+    @media (min-width: 768px){
+        main{
+            margin-left: 3rem;
+        }
+    }
 
+    @media (min-width: 1024px){
+        main{
+            display: flex;
+            flex-direction: column;
+        }
+
+        .content{
+            display: flex;
+            max-height: 100vh;
+        }
+    }
 </style>
