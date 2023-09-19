@@ -30,7 +30,7 @@
     }
 
     h2{
-        font-size: var(--unit-default);
+        font-size: 1rem;
         font-family: 'Inter SemiBold';
         margin-left: 5%;
     }
