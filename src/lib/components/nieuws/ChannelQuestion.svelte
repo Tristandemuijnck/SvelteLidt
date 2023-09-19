@@ -88,6 +88,15 @@
         max-height: 20rem;
     }
 
+    .channel-question-wrapper::-webkit-scrollbar {
+        width: 1px;
+    }
+
+    .channel-question-wrapper::-webkit-scrollbar-thumb {
+        background: var(--light-secondary);
+        border-radius: var(--radius);
+    }
+
     .channel-question{
         display: flex;
         flex-direction: row;

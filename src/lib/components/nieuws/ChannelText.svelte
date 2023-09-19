@@ -89,7 +89,7 @@
 
     .channel-text-wrapper{
         display: flex;
-        flex-direction: column;
+        flex-direction: column-reverse;
         row-gap: 1rem;
         background: var(--light-primary);
         padding: 1rem;
@@ -97,6 +97,15 @@
         max-height: 25rem;
         overflow-y: scroll;
         border: solid 4px var(--light-primary);
+    }
+
+    .channel-text-wrapper::-webkit-scrollbar {
+        width: 1px;
+    }
+
+    .channel-text-wrapper::-webkit-scrollbar-thumb {
+        background: var(--light-secondary);
+        border-radius: var(--radius);
     }
 
     .hidden-channel{
