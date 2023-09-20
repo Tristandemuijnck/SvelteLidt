@@ -16,12 +16,12 @@ export const repositoryName = config.repositoryName;
 // TODO: Update the routes array to match your project's route structure.
 const routes = [
     {
-        type: 'nieuws',
-        path: '/nieuws'
+        type: 'squad',
+        path: '/'
     },
     {
-        type: 'squad',
-        path: '/squad'
+        type: 'nieuws',
+        path: '/nieuws'
     },
     {
         type: 'tools',

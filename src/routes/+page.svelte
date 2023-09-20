@@ -1,25 +1,22 @@
 <script>
-    import Heading from "../lib/components/landing/Heading.svelte";
-    import DesktopNav from "../lib/components/landing/desktop/DesktopNav.svelte";
-    import MobileNav from "../lib/components/landing/mobile/MobileNav.svelte";
+    import { SliceZone } from '@prismicio/svelte'
+    import { components } from '$lib/slices'
+
+    export let data
 </script>
 
-<Heading />
+<section>
+    <SliceZone slices={data.slices} {components}/>
+</section>
 
-<DesktopNav />
 
-<h2>Recente notities</h2>
-
-<MobileNav />
+<pre>
+    {JSON.stringify(data.slices, null, 2)}
+</pre>
 
 <style>
     :root {
         --color-default: #03061D;
-    }
-
-    h2{
-        font-size: 1rem;
-        font-family: 'Inter SemiBold';
-        margin-left: 5%;
+        box-sizing: border-box;
     }
 </style>

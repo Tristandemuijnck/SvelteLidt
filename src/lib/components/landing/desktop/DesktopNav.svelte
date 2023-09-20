@@ -5,7 +5,7 @@
     <img class="logo" src="img/logo.svg" alt="" width="200" height="85">
 	<ul>
 		<li>
-			<a href="/squad">
+			<a href="/">
 				<svg
 					width="29"
 					height="32"
