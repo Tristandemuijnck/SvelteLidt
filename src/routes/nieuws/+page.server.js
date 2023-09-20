@@ -1,6 +1,6 @@
 import { createClient } from '$lib/prismicio';
 
-export const prerender = true;
+export const prerender = true
 
 const bearerToken = import.meta.env.VITE_BEARER_TOKEN
 const prismicToken = import.meta.env.VITE_PRISMIC_TOKEN
