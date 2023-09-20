@@ -1,5 +1,5 @@
 <script>
-    import Sinterklaas from '$lib/assets/images/Sinterklaas.jpg'
+    
 </script>
 
 <h2>Tools & Fools</h2>
@@ -8,42 +8,42 @@
     
     <section class="article-wrapper">
        
-        <article class="artoocle">
+        <article class="section-item">
             <a href="/tools">
                 <img src='/images/Sinterklaas.jpg' alt="ToolsSource">
                 <h3 class="tool-title">Canva</h3>
                 <p class="tool-description"><em>Design tool - Learn to design</em></p>
             </a>
         </article>
-        <article class="artoocle">
+        <article class="section-item">
             <a href="/tools">
                 <img src='/images/Sinterklaas.jpg' alt="ToolsSource">
                 <h3 class="tool-title">Source NAME</h3>
                 <p class="tool-description"><em>Description</em></p>
             </a>
         </article>
-        <article class="artoocle">
+        <article class="section-item">
             <a href="/tools">
                 <img src='/images/Sinterklaas.jpg' alt="ToolsSource">
                 <h3 class="tool-title">Source NAME</h3>
                 <p class="tool-description"><em>Description</em></p>
             </a>
         </article>
-        <article class="artoocle">
+        <article class="section-item">
             <a href="/tools">
                 <img src='/images/Sinterklaas.jpg' alt="ToolsSource">
                 <h3 class="tool-title">Canva</h3>
                 <p class="tool-description"><em>Design tool - Learn to design</em></p>
             </a>
         </article>
-        <article class="artoocle">
+        <article class="section-item">
             <a href="/tools">
                 <img src='/images/Sinterklaas.jpg' alt="ToolsSource">
                 <h3 class="tool-title">Source NAME</h3>
                 <p class="tool-description"><em>Description</em></p>
             </a>
         </article>
-        <article class="artoocle">
+        <article class="section-item">
             <a href="/tools">
                 <img src='/images/Sinterklaas.jpg' alt="ToolsSource">
                 <h3 class="tool-title">Source NAME</h3>
@@ -69,7 +69,7 @@ main {
     gap: 1.5em;
 }    
 
-.artoocle {
+.section-item {
     /* flex: 0 1 calc(25% - 1%); */
     /* min-width: 20rem; */
     width: min(100% - 50px, 200px);
@@ -81,15 +81,17 @@ main {
     padding: .5em
 }
 
-.artoocle a img {
+.section-item a img {
    width: 100%;
-   height: 15em; 
-   border-radius: 1em;
-   padding: 0.5em;
+   height: 15rem; 
+   border-radius: 1rem;
+   padding: 0.5rem;
 }
 
+
 .tool-description {
-    padding: 0 0.5em;
+    padding: 0.5rem 1rem;
+    
 }
 
 h2 {
@@ -101,13 +103,10 @@ h2 {
 .tool-title {
     font-size: 1.1rem;
     font-family: 'Inter SemiBold';
-    padding: 1em 0;
+    padding: 1rem 0;
     margin-left: 5%;
     
 }
-
-
-
 
 @media (min-width: 20rem) {
     main {
@@ -118,4 +117,13 @@ h2 {
         max-width: 25rem;
     } */
 }
+
+@media (min-width: 64rem) {
+        .article-wrapper {
+            margin-left: 18rem;
+            width: calc(100% - 18rem);
+            justify-content: flex-start;
+            flex-wrap: wrap;
+        }
+    }
 </style>
