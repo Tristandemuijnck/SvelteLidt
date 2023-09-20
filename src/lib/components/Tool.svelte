@@ -95,9 +95,9 @@ main {
 }
 
 h2 {
-    font-size: 1rem;
+    font-size: 1.2rem;
     font-family: 'Inter SemiBold';
-    margin-left: 5%;
+    margin-left: 19rem;
     }
 
 .tool-title {

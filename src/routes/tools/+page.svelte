@@ -4,8 +4,10 @@
 	import Tool from "$lib/components/Tool.svelte";
 
     export let data
-</script>
 
+    // console.log(data)
+</script>
+  
 <header>
     <section>
         <h1>FDND <span>Tools & Resources</span></h1>

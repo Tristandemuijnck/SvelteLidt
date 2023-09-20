@@ -13,7 +13,8 @@ export async function load({ fetch, request }) {
         accesToken: prismicToken
     })
 
-    const page = await client.getByUID('tools', 'tools');
-
+    const page = await client.getByUID('tools', 'tools', {'fetchLinks': ['tool.name', 'tool.link', 'tool.image', 'tool.description']});
+    // console.log(page.data)
+   
     return page.data
 }

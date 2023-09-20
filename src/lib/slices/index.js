@@ -2,12 +2,14 @@
 
 import MemberInfo from './MemberInfo/index.svelte';
 import NieuwsInfo from './NieuwsInfo/index.svelte';
+import SingleTool from './SingleTool/index.svelte';
 import SquadInfo from './SquadInfo/index.svelte';
 import ToolInfo from './ToolInfo/index.svelte';
 
 export const components = {
 	member_info: MemberInfo,
 	nieuws_info: NieuwsInfo,
+	single_tool: SingleTool,
 	squad_info: SquadInfo,
 	tool_info: ToolInfo
 };

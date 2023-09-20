@@ -103,7 +103,40 @@ export type SquadDocument<Lang extends string = string> = prismic.PrismicDocumen
 	Lang
 >;
 
-type ToolsDocumentDataSlicesSlice = ToolInfoSlice;
+type ToolDocumentDataSlicesSlice = ToolInfoSlice;
+
+/**
+ * Content for Tool documents
+ */
+interface ToolDocumentData {
+	/**
+	 * Slice Zone field in *Tool*
+	 *
+	 * - **Field Type**: Slice Zone
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: tool.slices[]
+	 * - **Tab**: Main
+	 * - **Documentation**: https://prismic.io/docs/field#slices
+	 */
+	slices: prismic.SliceZone<ToolDocumentDataSlicesSlice>;
+}
+
+/**
+ * Tool document from Prismic
+ *
+ * - **API ID**: `tool`
+ * - **Repeatable**: `true`
+ * - **Documentation**: https://prismic.io/docs/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type ToolDocument<Lang extends string = string> = prismic.PrismicDocumentWithUID<
+	Simplify<ToolDocumentData>,
+	'tool',
+	Lang
+>;
+
+type ToolsDocumentDataSlicesSlice = SingleToolSlice;
 
 /**
  * Content for Tools documents
@@ -136,7 +169,12 @@ export type ToolsDocument<Lang extends string = string> = prismic.PrismicDocumen
 	Lang
 >;
 
-export type AllDocumentTypes = MemberDocument | NieuwsDocument | SquadDocument | ToolsDocument;
+export type AllDocumentTypes =
+	| MemberDocument
+	| NieuwsDocument
+	| SquadDocument
+	| ToolDocument
+	| ToolsDocument;
 
 /**
  * Primary content in *MemberInfo → Primary*
@@ -271,6 +309,48 @@ type NieuwsInfoSliceVariation = NieuwsInfoSliceDefault;
  * - **Documentation**: https://prismic.io/docs/slice
  */
 export type NieuwsInfoSlice = prismic.SharedSlice<'nieuws_info', NieuwsInfoSliceVariation>;
+
+/**
+ * Primary content in *SingleTool → Items*
+ */
+export interface SingleToolSliceDefaultItem {
+	/**
+	 * tool field in *SingleTool → Items*
+	 *
+	 * - **Field Type**: Content Relationship
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: single_tool.items[].tool
+	 * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+	 */
+	tool: prismic.ContentRelationshipField;
+}
+
+/**
+ * Default variation for SingleTool Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type SingleToolSliceDefault = prismic.SharedSliceVariation<
+	'default',
+	Record<string, never>,
+	Simplify<SingleToolSliceDefaultItem>
+>;
+
+/**
+ * Slice variation for *SingleTool*
+ */
+type SingleToolSliceVariation = SingleToolSliceDefault;
+
+/**
+ * SingleTool Shared Slice
+ *
+ * - **API ID**: `single_tool`
+ * - **Description**: SingleTool
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type SingleToolSlice = prismic.SharedSlice<'single_tool', SingleToolSliceVariation>;
 
 /**
  * Primary content in *SquadInfo → Primary*
@@ -420,6 +500,9 @@ declare module '@prismicio/client' {
 			SquadDocument,
 			SquadDocumentData,
 			SquadDocumentDataSlicesSlice,
+			ToolDocument,
+			ToolDocumentData,
+			ToolDocumentDataSlicesSlice,
 			ToolsDocument,
 			ToolsDocumentData,
 			ToolsDocumentDataSlicesSlice,
@@ -432,6 +515,10 @@ declare module '@prismicio/client' {
 			NieuwsInfoSliceDefaultPrimary,
 			NieuwsInfoSliceVariation,
 			NieuwsInfoSliceDefault,
+			SingleToolSlice,
+			SingleToolSliceDefaultItem,
+			SingleToolSliceVariation,
+			SingleToolSliceDefault,
 			SquadInfoSlice,
 			SquadInfoSliceDefaultPrimary,
 			SquadInfoSliceDefaultItem,

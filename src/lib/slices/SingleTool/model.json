@@ -1,0 +1,26 @@
+{
+  "id": "single_tool",
+  "type": "SharedSlice",
+  "name": "SingleTool",
+  "description": "SingleTool",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {},
+      "items": {
+        "tool": {
+          "type": "Link",
+          "config": {
+            "label": "tool",
+            "select": "document"
+          }
+        }
+      }
+    }
+  ]
+}
