@@ -4,8 +4,6 @@ import type * as prismic from '@prismicio/client';
 
 type Simplify<T> = { [KeyType in keyof T]: T[KeyType] };
 
-type MemberDocumentDataSlicesSlice = MemberInfoSlice;
-
 /**
  * Content for Member documents
  */
@@ -53,17 +51,6 @@ interface MemberDocumentData {
 	 * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
 	 */
 	link: prismic.LinkField;
-
-	/**
-	 * Slice Zone field in *Member*
-	 *
-	 * - **Field Type**: Slice Zone
-	 * - **Placeholder**: *None*
-	 * - **API ID Path**: member.slices[]
-	 * - **Tab**: Main
-	 * - **Documentation**: https://prismic.io/docs/field#slices
-	 */
-	slices: prismic.SliceZone<MemberDocumentDataSlicesSlice>;
 }
 
 /**
@@ -219,78 +206,6 @@ export type AllDocumentTypes =
 	| SquadDocument
 	| ToolDocument
 	| ToolsDocument;
-
-/**
- * Primary content in *MemberInfo → Primary*
- */
-export interface MemberInfoSliceDefaultPrimary {
-	/**
-	 * image field in *MemberInfo → Primary*
-	 *
-	 * - **Field Type**: Image
-	 * - **Placeholder**: *None*
-	 * - **API ID Path**: member_info.primary.image
-	 * - **Documentation**: https://prismic.io/docs/field#image
-	 */
-	image: prismic.ImageField<never>;
-
-	/**
-	 * firstName field in *MemberInfo → Primary*
-	 *
-	 * - **Field Type**: Text
-	 * - **Placeholder**: *None*
-	 * - **API ID Path**: member_info.primary.firstname
-	 * - **Documentation**: https://prismic.io/docs/field#key-text
-	 */
-	firstname: prismic.KeyTextField;
-
-	/**
-	 * lastName field in *MemberInfo → Primary*
-	 *
-	 * - **Field Type**: Text
-	 * - **Placeholder**: *None*
-	 * - **API ID Path**: member_info.primary.lastname
-	 * - **Documentation**: https://prismic.io/docs/field#key-text
-	 */
-	lastname: prismic.KeyTextField;
-
-	/**
-	 * link field in *MemberInfo → Primary*
-	 *
-	 * - **Field Type**: Link
-	 * - **Placeholder**: *None*
-	 * - **API ID Path**: member_info.primary.link
-	 * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
-	 */
-	link: prismic.LinkField;
-}
-
-/**
- * Default variation for MemberInfo Slice
- *
- * - **API ID**: `default`
- * - **Description**: Default
- * - **Documentation**: https://prismic.io/docs/slice
- */
-export type MemberInfoSliceDefault = prismic.SharedSliceVariation<
-	'default',
-	Simplify<MemberInfoSliceDefaultPrimary>,
-	never
->;
-
-/**
- * Slice variation for *MemberInfo*
- */
-type MemberInfoSliceVariation = MemberInfoSliceDefault;
-
-/**
- * MemberInfo Shared Slice
- *
- * - **API ID**: `member_info`
- * - **Description**: MemberInfo
- * - **Documentation**: https://prismic.io/docs/slice
- */
-export type MemberInfoSlice = prismic.SharedSlice<'member_info', MemberInfoSliceVariation>;
 
 /**
  * Primary content in *NieuwsInfo → Primary*
@@ -537,7 +452,6 @@ declare module '@prismicio/client' {
 		export type {
 			MemberDocument,
 			MemberDocumentData,
-			MemberDocumentDataSlicesSlice,
 			NieuwsDocument,
 			NieuwsDocumentData,
 			NieuwsDocumentDataSlicesSlice,
@@ -551,10 +465,6 @@ declare module '@prismicio/client' {
 			ToolsDocumentData,
 			ToolsDocumentDataSlicesSlice,
 			AllDocumentTypes,
-			MemberInfoSlice,
-			MemberInfoSliceDefaultPrimary,
-			MemberInfoSliceVariation,
-			MemberInfoSliceDefault,
 			NieuwsInfoSlice,
 			NieuwsInfoSliceDefaultPrimary,
 			NieuwsInfoSliceVariation,

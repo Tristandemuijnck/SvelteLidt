@@ -41,17 +41,6 @@
 					"placeholder": "",
 					"select": null
 				}
-			},
-			"slices": {
-				"type": "Slices",
-				"fieldset": "Slice Zone",
-				"config": {
-					"choices": {
-						"member_info": {
-							"type": "SharedSlice"
-						}
-					}
-				}
 			}
 		}
 	}
