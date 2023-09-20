@@ -12,6 +12,36 @@
 				},
 				"type": "UID"
 			},
+			"image": {
+				"type": "Image",
+				"config": {
+					"label": "image",
+					"constraint": {},
+					"thumbnails": []
+				}
+			},
+			"firstname": {
+				"type": "Text",
+				"config": {
+					"label": "firstName",
+					"placeholder": ""
+				}
+			},
+			"lastname": {
+				"type": "Text",
+				"config": {
+					"label": "lastName",
+					"placeholder": ""
+				}
+			},
+			"link": {
+				"type": "Link",
+				"config": {
+					"label": "link",
+					"placeholder": "",
+					"select": null
+				}
+			},
 			"slices": {
 				"type": "Slices",
 				"fieldset": "Slice Zone",

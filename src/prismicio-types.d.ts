@@ -11,6 +11,50 @@ type MemberDocumentDataSlicesSlice = MemberInfoSlice;
  */
 interface MemberDocumentData {
 	/**
+	 * image field in *Member*
+	 *
+	 * - **Field Type**: Image
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: member.image
+	 * - **Tab**: Main
+	 * - **Documentation**: https://prismic.io/docs/field#image
+	 */
+	image: prismic.ImageField<never>;
+
+	/**
+	 * firstName field in *Member*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: member.firstname
+	 * - **Tab**: Main
+	 * - **Documentation**: https://prismic.io/docs/field#key-text
+	 */
+	firstname: prismic.KeyTextField;
+
+	/**
+	 * lastName field in *Member*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: member.lastname
+	 * - **Tab**: Main
+	 * - **Documentation**: https://prismic.io/docs/field#key-text
+	 */
+	lastname: prismic.KeyTextField;
+
+	/**
+	 * link field in *Member*
+	 *
+	 * - **Field Type**: Link
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: member.link
+	 * - **Tab**: Main
+	 * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+	 */
+	link: prismic.LinkField;
+
+	/**
 	 * Slice Zone field in *Member*
 	 *
 	 * - **Field Type**: Slice Zone
