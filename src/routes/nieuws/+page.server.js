@@ -3,6 +3,7 @@ import { createClient } from '$lib/prismicio';
 export const prerender = true;
 
 const bearerToken = import.meta.env.VITE_BEARER_TOKEN
+const prismicToken = import.meta.env.VITE_PRISMIC_TOKEN
 
 const botChannelMsg = 'https://discord.com/api/channels/1017100388324880465/messages?limit=10'
 const inspoChannelMsg = 'https://discord.com/api/channels/1149701698504368180/messages?limit=10'
@@ -11,7 +12,13 @@ const forumQuestions = 'https://discord.com/api/guilds/1017099203882782750/threa
 export async function load({ fetch, request }) {
 
     // Prismic.io link
-	const client = createClient({ fetch, request });
+	const client = createClient('Wum',
+    {
+        fetch,
+        request,
+        accesToken: prismicToken
+    })
+
 	const page = await client.getByUID('nieuws', 'nieuws');
 
     // Get Discord messages general channel
