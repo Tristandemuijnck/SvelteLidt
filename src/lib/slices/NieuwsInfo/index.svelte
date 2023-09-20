@@ -16,13 +16,20 @@
     }
 
     h1{
-        font-size: 1.3rem;
+        font-size: 1.5rem;
         font-weight: 700;
-        margin-bottom: 1rem;
+        margin-bottom: 0.2rem;
     }
 
     h1 span{
         font-family: 'Courgette', cursive;
         letter-spacing: -6%;
+        color: var(--light-secondary);
+    }
+
+    p{
+        font-size: 0.8rem;
+        font-weight: 600;
+        color: var(--light-subheading-color);
     }
 </style>
