@@ -1,9 +1,9 @@
 <script>
-    import DesktopNav from "$lib/components/landing/desktop/DesktopNav.svelte";
-    import MobileNav from "$lib/components/landing/mobile/MobileNav.svelte";
+    import { SliceZone } from '@prismicio/svelte'
+    import { components } from '$lib/slices'
 	import Tool from "$lib/components/Tool.svelte";
-	
-    
+
+    export let data
 </script>
 
 <header>
@@ -13,11 +13,15 @@
     </section>
 </header>
 
-<DesktopNav />
+<section>
+    <SliceZone slices={data.slices} {components}/>
+</section>
 
 <Tool />
 
-<MobileNav />
+<pre>
+    {JSON.stringify(data.slices, null, 2)}
+</pre>
 
 <style>
     :root {
@@ -34,8 +38,8 @@
         margin-left: 5%;
     } */
 
-    
 
 
-   
+
+
 </style>

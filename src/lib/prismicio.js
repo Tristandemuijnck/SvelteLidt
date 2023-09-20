@@ -19,6 +19,14 @@ const routes = [
         type: 'nieuws',
         path: '/nieuws'
     },
+    {
+        type: 'squad',
+        path: '/squad'
+    },
+    {
+        type: 'tools',
+        path: '/tools'
+    },
 	{
 		type: 'nieuws',
 		path: '/:uid'
