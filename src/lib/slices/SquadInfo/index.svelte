@@ -44,7 +44,6 @@
 	.section-members .to-the-left {
 		margin: auto;
 		margin-top: 0;
-		margin-left: 0rem;
 	}
 
 	article {
@@ -55,6 +54,7 @@
 		border-radius: var(--unit-default);
 		margin: auto;
 		position: relative;
+		box-shadow: var(--box-shadow);
 	}
 
 	img {
@@ -83,7 +83,7 @@
 		section {
 			width: 72vw;
 			margin-top: 0rem;
-			margin-left: 18rem;
+			margin: 0 0 0 18rem;
 		}
 
 		article {
@@ -91,9 +91,10 @@
 		}
 	}
 
-	@media (min-width: 90rem) {
-		section {
+	@media (min-width: 97.25rem) {
+		.section-members {
 			width: 64rem;
+			margin: auto;
 		}
 	}
 

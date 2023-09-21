@@ -20,7 +20,6 @@
     --unit-medium: 0.5rem;
     --unit-default: 1rem;
 
-
 }
 
 :global(:root){
@@ -116,6 +115,7 @@ body{
     padding: 1rem;
     font-family: 'Inter', sans-serif;
     z-index: 5;
+    box-shadow: var(--box-shadow);
 }
 
 .desktop-nav-button {
@@ -123,6 +123,8 @@ body{
     position: absolute;
     right: -1.25em;
     transition: 0.3s ease-in-out;
+    top: 50%;
+    transform: translateY(50%, -50%);
 }
 
 .desktop-nav-button svg {
