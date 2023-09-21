@@ -30,7 +30,6 @@
         color: var(--light-secondary);
     }
 
-
     header section {
         display: flex;
         flex-direction: column;
@@ -47,7 +46,23 @@
     } */
 
 
+    @media (min-width: 20rem) {
+    main {
+        margin: auto;
+    }
+    
+    }
 
+    @media (min-width: 48rem) {
+        header section {
+            /* display: flex; */
+            /* width: 80%; */
+            text-align: left;
+            margin-left: 18rem;
+            /* justify-content: center;
+            align-items: center; */
+        }
+    }
 
 
 </style>
