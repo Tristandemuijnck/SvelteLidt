@@ -1,38 +1,55 @@
-# create-svelte
+# 📣 Wum
+<!-- Geef je project een titel en schrijf in één zin wat het is -->
+Wum- een overzicht van alle squadleden, de beste tools en het laatste FDND nieuws gemaakt met SvelteKit en Prismic.io.
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
+## 🗃️ Inhoudsopgave
 
-## Creating a project
+  * [Beschrijving](#-beschrijving)
+  * [Kenmerken](#-kenmerken)
+  * [Installatie](#-installatie)
+  * [Gebruik](#-gebruik)
+  * [Bronnen](#-bronnen)
+  * [Licentie](#-licentie)
 
-If you're seeing this, you've probably already done this step. Congrats!
+## 📜 Beschrijving
+<!-- Bij Beschrijving staat kort beschreven wat voor project het is en wat je hebt gemaakt -->
+<!-- Voeg een mooie poster visual toe 📸 -->
+<!-- Voeg een link toe naar Github Pages 🌐-->
+Dit project omvat een overzicht van alle squadleden, de beste tools en het laatste FDND nieuws.
 
-```bash
-# create a new project in the current directory
-npm create svelte@latest
+![image](https://github.com/Tristandemuijnck/Wum/assets/43402897/23159455-c699-40af-8f96-86498c01acc7)
 
-# create a new project in my-app
-npm create svelte@latest my-app
-```
+[Wum](https://wum.vercel.app/)
 
-## Developing
+## 🪚 Gebruik
+<!-- Bij Gebruik staat de user story, hoe het werkt en wat je er mee kan. -->
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+## 🎭 Kenmerken
+<!-- Bij Kenmerken staat welke technieken zijn gebruikt en hoe. Wat is de HTML structuur? Wat zijn de belangrijkste dingen in CSS? Wat is er met JS gedaan en hoe? Misschien heb je iets met NodeJS gedaan, of heb je een framwork of library gebruikt? -->
 
-```bash
-npm run dev
+Dit project is gemaakt met: 
 
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
+**Tools**
+  * 💻 Visual Studio Code
+  * 🎨 Concepts
+  * 🍰 Slicemachine
 
-## Building
+**Tech**
+  * ⚙️ SvelteKit
+  * 🖼️ Prismic.io
+  * 🖌️ CSS
+  * 🎨 Discord API
 
-To create a production version of your app:
+## 📥 Installatie
+<!-- Bij Instalatie staat hoe een andere developer aan jouw repo kan werken -->
 
-```bash
-npm run build
-```
+1. Clone of download deze repository naar de gewenste folder.
+2. Open de root directory van dit project en open het project in een code editor naar keuze.
+3. Gebruik ```npm install``` om de benodigde packages te downloaden voor dit project.
+4. Start een server met ```npm dev start```. 
 
-You can preview the production build with `npm run preview`.
+## 📘 Bronnen
 
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+## 🪪 Licentie
+
+This project is licensed under the terms of the [MIT license](./LICENSE).
