@@ -10,9 +10,9 @@
 </section>
 
 
-<pre>
+<!-- <pre>
     {JSON.stringify(data.slices, null, 2)}
-</pre>
+</pre> -->
 
 <style>
     :root {

@@ -4,8 +4,6 @@
 </script>
 
 <section data-slice-type={slice.slice_type} data-slice-variation={slice.variation}>
-	Placeholder component for {slice.slice_type} (variation: {slice.variation}) Slices
-
 	<section class="article-wrapper">
 		{#each slice.items as item, i}
 		<article class="section-item">
@@ -17,9 +15,6 @@
 		</article>
 		{/each}
 	</section>
-
-	
-
 </section>
 
 <style> 
@@ -27,7 +22,7 @@
 	main {
 		border-radius: 0.8em;
 	} 
-	
+
 	.article-wrapper {
 		width: 100%;
 		padding: 1em;
@@ -36,11 +31,9 @@
 		flex-wrap: wrap;
 		justify-content: center;
 		gap: 1.5em;
-	}    
-	
+	} 
+
 	.section-item {
-		/* flex: 0 1 calc(25% - 1%); */
-		/* min-width: 20rem; */
 		width: min(100% - 50px, 200px);
 		max-width: 30em;
 		min-width: 18em;
@@ -56,7 +49,6 @@
 	   border-radius: 1rem;
 	   padding: 0.5rem;
 	}
-	
 	
 	.tool-description {
 		padding: 0.5rem 1rem;

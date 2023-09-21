@@ -11,11 +11,11 @@
 <header>
     <section>
         <h1>FDND <span>Tools & Resources</span></h1>
-        <p>Wat schrijf je vandaag op?</p>
+        <p>Waar werken we vandaag aan?</p>
     </section>
 </header>
 
-<section>
+<section >
     <SliceZone slices={data.slices} {components}/>
 </section>
 
@@ -30,6 +30,16 @@
         color: var(--light-secondary);
     }
 
+
+    header section {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        margin-top: 4rem;
+        gap: 1rem;
+        padding: 1rem;
+    }
+      
     /* h2 {
         font-size: 1rem;
         font-family: 'Inter SemiBold';
