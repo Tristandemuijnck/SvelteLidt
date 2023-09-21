@@ -7,13 +7,19 @@
     --light-bg: #F4F5F7;
     --light-primary: #FFFFFF;
     --light-secondary: #5a00d8;
-    --ligt-accent: ;
+    --light-accent: #a76afc;
 
     --light-font-color: #000000;
     --light-heading: 'Inter SemiBold', sans-serif;
     --light-subheading-color: #4D4F62;
 
     --radius: 10px;
+
+    --unit-small: 0.25rem;
+    --unit-medium: 0.5rem;
+    --unit-default: 1rem;
+
+
 }
 
 :global(:root){
