@@ -20,6 +20,7 @@
     --unit-medium: 0.5rem;
     --unit-default: 1rem;
 
+    --animation-default: 0.2s;
 }
 
 :global(:root){
@@ -158,8 +159,8 @@ body{
 }
 }
 
-@media (prefers-reduced-motion) {
+@media (prefers-reduced-motion: reduce) {
     :root {
-        --animation-default: 0.01s;
+        /* --animation-default: 0.01s; */
     }
 }
