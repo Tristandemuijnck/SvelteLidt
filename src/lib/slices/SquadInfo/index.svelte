@@ -23,7 +23,7 @@
 				height="320"
 			/>
 			<h2>{item.member.data.firstname} {item.member.data.lastname}</h2>
-			<a href="{item.member.data.link ? item.member.data.link : "/"}">Bezoek mijn visitekaartje</a>
+			<a href="{item.member.data.link ? item.member.data.link.url : "/"}">Bezoek mijn visitekaartje</a>
 		</article>
 	{/each}
 </section>
