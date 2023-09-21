@@ -97,6 +97,7 @@
         max-height: 25rem;
         overflow-y: scroll;
         border: solid 4px var(--light-primary);
+        box-shadow: var(--box-shadow);
     }
 
     .channel-text-wrapper::-webkit-scrollbar {

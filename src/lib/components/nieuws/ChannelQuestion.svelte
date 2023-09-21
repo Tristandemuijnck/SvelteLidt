@@ -104,6 +104,7 @@
         background: var(--light-primary);
         padding: 1rem;
         border-radius: var(--radius);
+        box-shadow: var(--box-shadow);
     }
 
     .question-top{
