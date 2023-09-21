@@ -114,7 +114,7 @@
 			animation-timeline: --revealing-image;
 
 			/* Tweak range when effect should run*/
-			animation-range: entry 10% cover 50%;
+			animation-range: entry 10% cover 40%;
 		}
 
 		@keyframes reveal {
