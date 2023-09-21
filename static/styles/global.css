@@ -112,6 +112,7 @@ body{
     bottom: 0;
     padding: 1rem;
     font-family: 'Inter', sans-serif;
+    z-index: 5;
 }
 
 .desktop-nav-button {

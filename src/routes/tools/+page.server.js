@@ -14,7 +14,7 @@ export async function load({ fetch, request }) {
     })
 
     const page = await client.getByUID('tools', 'tools', {'fetchLinks': ['tool.name', 'tool.link', 'tool.visual', 'tool.description']});
-    console.log(page)
+    // console.log(page)
 
     return page.data
 }
