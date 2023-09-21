@@ -53,7 +53,7 @@
     </section>
 </main>
 
-<style> 
+<!-- <style> 
 
 main {
     border-radius: 0.8em;
@@ -126,4 +126,4 @@ h2 {
             flex-wrap: wrap;
         }
     }
-</style>
+</style> -->

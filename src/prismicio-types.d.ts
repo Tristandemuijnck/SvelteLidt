@@ -134,22 +134,53 @@ export type SquadDocument<Lang extends string = string> = prismic.PrismicDocumen
 	Lang
 >;
 
-type ToolDocumentDataSlicesSlice = ToolInfoSlice;
-
 /**
  * Content for Tool documents
  */
 interface ToolDocumentData {
 	/**
-	 * Slice Zone field in *Tool*
+	 * name field in *Tool*
 	 *
-	 * - **Field Type**: Slice Zone
+	 * - **Field Type**: Text
 	 * - **Placeholder**: *None*
-	 * - **API ID Path**: tool.slices[]
+	 * - **API ID Path**: tool.name
 	 * - **Tab**: Main
-	 * - **Documentation**: https://prismic.io/docs/field#slices
+	 * - **Documentation**: https://prismic.io/docs/field#key-text
 	 */
-	slices: prismic.SliceZone<ToolDocumentDataSlicesSlice>;
+	name: prismic.KeyTextField;
+
+	/**
+	 * link field in *Tool*
+	 *
+	 * - **Field Type**: Link
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: tool.link
+	 * - **Tab**: Main
+	 * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+	 */
+	link: prismic.LinkField;
+
+	/**
+	 * visual field in *Tool*
+	 *
+	 * - **Field Type**: Image
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: tool.visual
+	 * - **Tab**: Main
+	 * - **Documentation**: https://prismic.io/docs/field#image
+	 */
+	visual: prismic.ImageField<never>;
+
+	/**
+	 * description field in *Tool*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: tool.description
+	 * - **Tab**: Main
+	 * - **Documentation**: https://prismic.io/docs/field#key-text
+	 */
+	description: prismic.KeyTextField;
 }
 
 /**
@@ -270,6 +301,21 @@ type NieuwsInfoSliceVariation = NieuwsInfoSliceDefault;
 export type NieuwsInfoSlice = prismic.SharedSlice<'nieuws_info', NieuwsInfoSliceVariation>;
 
 /**
+ * Primary content in *SingleTool → Primary*
+ */
+export interface SingleToolSliceDefaultPrimary {
+	/**
+	 * name field in *SingleTool → Primary*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: single_tool.primary.name
+	 * - **Documentation**: https://prismic.io/docs/field#key-text
+	 */
+	name: prismic.KeyTextField;
+}
+
+/**
  * Primary content in *SingleTool → Items*
  */
 export interface SingleToolSliceDefaultItem {
@@ -293,7 +339,7 @@ export interface SingleToolSliceDefaultItem {
  */
 export type SingleToolSliceDefault = prismic.SharedSliceVariation<
 	'default',
-	Record<string, never>,
+	Simplify<SingleToolSliceDefaultPrimary>,
 	Simplify<SingleToolSliceDefaultItem>
 >;
 
@@ -460,7 +506,6 @@ declare module '@prismicio/client' {
 			SquadDocumentDataSlicesSlice,
 			ToolDocument,
 			ToolDocumentData,
-			ToolDocumentDataSlicesSlice,
 			ToolsDocument,
 			ToolsDocumentData,
 			ToolsDocumentDataSlicesSlice,
@@ -470,6 +515,7 @@ declare module '@prismicio/client' {
 			NieuwsInfoSliceVariation,
 			NieuwsInfoSliceDefault,
 			SingleToolSlice,
+			SingleToolSliceDefaultPrimary,
 			SingleToolSliceDefaultItem,
 			SingleToolSliceVariation,
 			SingleToolSliceDefault,

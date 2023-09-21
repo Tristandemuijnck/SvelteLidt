@@ -12,15 +12,34 @@
 				},
 				"type": "UID"
 			},
-			"slices": {
-				"type": "Slices",
-				"fieldset": "Slice Zone",
+			"name": {
+				"type": "Text",
 				"config": {
-					"choices": {
-						"tool_info": {
-							"type": "SharedSlice"
-						}
-					}
+					"label": "name",
+					"placeholder": ""
+				}
+			},
+			"link": {
+				"type": "Link",
+				"config": {
+					"label": "link",
+					"placeholder": "",
+					"select": null
+				}
+			},
+			"visual": {
+				"type": "Image",
+				"config": {
+					"label": "visual",
+					"constraint": {},
+					"thumbnails": []
+				}
+			},
+			"description": {
+				"type": "Text",
+				"config": {
+					"label": "description",
+					"placeholder": ""
 				}
 			}
 		}

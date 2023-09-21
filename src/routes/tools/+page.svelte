@@ -19,11 +19,7 @@
     <SliceZone slices={data.slices} {components}/>
 </section>
 
-<Tool />
-
-<pre>
-    {JSON.stringify(data.slices, null, 2)}
-</pre>
+<!-- <Tool /> -->
 
 <style>
     :root {
