@@ -148,7 +148,7 @@
         }
 
         .channel-text-wrapper{
-            max-height: 35rem;
+            max-height: 40rem;
         }
     }
 
