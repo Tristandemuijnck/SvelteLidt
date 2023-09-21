@@ -150,3 +150,16 @@ body{
 .to-the-left .desktop-nav-button {
     transform: rotate(180deg);
 }
+
+@media (prefers-contrast: more) {
+    :root {
+    --light-secondary: #12002c;
+    --light-accent: #380184;
+}
+}
+
+@media (prefers-reduced-motion) {
+    :root {
+        --animation-default: 0.01s;
+    }
+}

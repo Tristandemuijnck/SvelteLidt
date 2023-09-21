@@ -69,7 +69,7 @@
 
 	a {
 		color: var(--light-secondary);
-		transition: 0.2s ease-in-out;
+		transition: var(--animation-default) ease-in-out;
 		transform: rotateZ(0deg);
 		position: absolute;
 	}

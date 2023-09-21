@@ -103,12 +103,12 @@
 		align-items: center;
 		gap: 0.5rem;
 		padding: 0.5rem;
-		transition: 0.2s ease-in-out;
+		transition: var(--animation-default) ease-in-out;
         position: relative;
 	}
 
 	a svg path {
-		transition: 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
+		transition: var(--animation-default) cubic-bezier(0.075, 0.82, 0.165, 1);
 	}
 
 	a:is(:hover, :focus) {
