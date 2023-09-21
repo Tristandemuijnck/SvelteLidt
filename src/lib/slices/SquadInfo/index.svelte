@@ -83,7 +83,7 @@
 		section {
 			width: 72vw;
 			margin-top: 0rem;
-			margin: 0 0 0 18rem;
+			margin: 0 0 10rem 18rem;
 		}
 
 		article {
