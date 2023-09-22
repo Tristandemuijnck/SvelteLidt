@@ -80,7 +80,7 @@
 	}
 
 	@media (min-width: 48rem) {
-		section {
+		.section-members {
 			width: 72vw;
 			margin-top: 0rem;
 			margin: 0 0 10rem 18rem;
@@ -94,7 +94,7 @@
 	@media (min-width: 97.25rem) {
 		.section-members {
 			width: 64rem;
-			margin: auto;
+			margin: 0 auto 10rem;
 		}
 	}
 
