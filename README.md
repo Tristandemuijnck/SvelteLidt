@@ -50,6 +50,8 @@ Dit project is gemaakt met:
 
 ## 📘 Bronnen
 
+https://scroll-driven-animations.style/demos/image-reveal/css/
+
 ## 🪪 Licentie
 
 This project is licensed under the terms of the [MIT license](./LICENSE).
