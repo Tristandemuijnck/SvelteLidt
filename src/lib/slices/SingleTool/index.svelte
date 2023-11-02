@@ -10,9 +10,9 @@
 			<a href="{item.tool.data.link.url}" target="_blank">
 				<div class="img-wrapper">
 					{#if item.tool.data.visual}
-						<img class="img-prismic" src="{item.tool.data.visual}" alt="">
+						<img class="img-prismic" src="{item.tool.data.visual}" alt="{item.tool.data.alt}">
 					{:else}
-						<img class="img-fallback" src="/img/logo.svg" alt="">
+						<img class="img-fallback" src="/img/logo.svg" alt="{item.tool.data.alt}">
 					{/if}
 				</div>
 				<h3 class="tool-title">{item.tool.data.name}</h3>

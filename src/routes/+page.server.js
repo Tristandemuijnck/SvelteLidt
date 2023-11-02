@@ -14,6 +14,5 @@ export async function load({ fetch, request }) {
     })
 
     const page = await client.getByUID('squad', '2b', {'fetchLinks': ['member.firstname', 'member.lastname', 'member.image', 'member.link']});
-
     return page.data
 }
